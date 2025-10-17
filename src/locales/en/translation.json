@@ -1,0 +1,499 @@
+{
+  "nav": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "benefits": "Benefits",
+    "users": "Users",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "From Dung to Dhan",
+    "subtitle": "गौशाला से रोज़ी — किसानों के लिए न्यायपूर्ण भुगतान",
+    "description": "IoT-verified weighments, same-day payouts, local CBG production",
+    "joinFarmer": "Join as Farmer",
+    "requestPickup": "Request Pickup",
+    "requestDemo": "Request Demo"
+  },
+  "platformHighlights": {
+    "title": "Platform Highlights",
+    "forFarmers": "For Farmers:",
+    "forFarmersDesc": "Earn ₹3-5/kg from cattle dung with same-day payments and transparent weighing",
+    "simpleProcess": "Simple Process:",
+    "simpleProcessDesc": "4-step journey from collection to payment with GPS tracking and IoT verification",
+    "platformUsers": "Platform Users:",
+    "platformUsersDesc": "Specialized tools for field executives, plant operators, and administrators",
+    "cleanEnergy": "Clean Energy:",
+    "cleanEnergyDesc": "Convert waste to CBG while reducing emissions and supporting sustainable development"
+  },
+  "empoweringSection": {
+    "title": "Empowering Rural India",
+    "description": "Saubhagya connects farmers with biogas production facilities, creating sustainable income from agricultural waste while contributing to clean energy solutions."
+  },
+  "cards": {
+    "forFarmers": {
+      "title": "For Farmers",
+      "description": "Convert cattle waste into daily earnings with transparent pricing and instant digital receipts.",
+      "button": "Join as Farmer"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "description": "From collection to clean energy — a simple 4-step process powered by smart logistics and IoT.",
+      "button": "Explore Process"
+    },
+    "platformUsers": {
+      "title": "Platform Users",
+      "description": "From field collectors to biogas managers — discover the apps that power Saubhagya.",
+      "button": "View Apps"
+    },
+    "getStarted": {
+      "title": "Get Started",
+      "description": "Join our growing network of farmers, gaushalas, and biogas operators today.",
+      "button": "Get Onboard"
+    }
+  },
+  "aboutUs": "About Us",
+  "howItWorks": {
+    "title": "How It Works",
+    "processOverview": "Process Overview",
+    "processDescription": "A transparent 4-step journey — from cattle waste to clean energy.",
+    "empoweringFarmers": "Empowering every farmer to become a clean energy partner.",
+    "benefitsTitle": "Benefits Designed for You",
+    "joinToday": "Join Saubhagya Today",
+    "steps": {
+      "step1": {
+        "title": "Smart Collection",
+        "subtitle": "कचरे से कमाई — डिजिटल तरीके से।",
+        "description": "The journey begins at the farm, where Saubhagya's GauSakhi App and IoT-based weighing scales record each collection with accuracy and trust.",
+        "shortDescription": "Smart collection of cattle dung through IoT weighing scales and GauSakhi app.",
+        "details": "Every kilogram of cattle dung is digitally logged, verified, and assigned a unique transaction ID — ensuring farmers are paid for every contribution.",
+        "highlights": [
+          "Real-time digital receipts",
+          "RFID-based cattle tracking",
+          "Transparent weighing with smart IoT scales"
+        ],
+        "whyItMatters": "No middlemen, no manual errors — just fair, measurable income for every farmer."
+      },
+      "step2": {
+        "title": "Safe Transport",
+        "subtitle": "सुरक्षित ढुलाई — स्वच्छता और पारदर्शिता के साथ।",
+        "description": "Once collected, the cattle dung is carried in smart tractor-bogeys equipped with trap doors to prevent spillage.",
+        "shortDescription": "GPS-tracked safe transportation via BiogasSangh platform.",
+        "details": "The BiogasSangh platform tracks every vehicle through GPS and route optimization, ensuring on-time, clean, and efficient delivery to the biogas plant.",
+        "highlights": [
+          "Real-time GPS tracking",
+          "Route optimization for minimal wastage",
+          "End-to-end traceability through the app"
+        ],
+        "whyItMatters": "Efficiency on roads means faster payments, cleaner villages, and reduced transport costs."
+      },
+      "step3": {
+        "title": "CBG Production",
+        "subtitle": "गुणवत्ता युक्त उत्पादन — तकनीक के भरोसे।",
+        "description": "At the biogas plant, the collected waste is transformed into Compressed Bio Gas (CBG) using advanced digesters.",
+        "shortDescription": "Biogas purification and conversion into Compressed Bio Gas (CBG).",
+        "details": "The ShuddhiDoot App continuously monitors methane content, purity, and quality benchmarks using IoT sensors and blockchain verification.",
+        "highlights": [
+          "Real-time methane monitoring",
+          "Blockchain-secured quality certificates",
+          "Batch-level traceability and compliance"
+        ],
+        "whyItMatters": "Every batch of CBG meets global clean fuel standards — ensuring reliability for buyers and rewards for producers."
+      },
+      "step4": {
+        "title": "Fair Payment",
+        "subtitle": "तेज़ भुगतान — पारदर्शी और भरोसेमंद।",
+        "description": "After successful delivery and verification, the UrjaVyapar App automates payments directly to farmers' bank accounts — within 3 days.",
+        "shortDescription": "Instant, transparent digital payments to farmers within 3 days.",
+        "details": "This eliminates delays, manual paperwork, and uncertainty, creating a culture of financial transparency.",
+        "highlights": [
+          "3-day digital payout cycle",
+          "Instant SMS and app notifications",
+          "Payment dashboard for farmers"
+        ],
+        "whyItMatters": "When farmers get paid faster, they invest faster — driving a self-sustaining rural economy."
+      }
+    },
+    "benefits": {
+      "guaranteedQuality": {
+        "title": "Guaranteed Quality",
+        "description": "IoT sensors ensure quality standards are met"
+      },
+      "realTimeTracking": {
+        "title": "Real-time Tracking",
+        "description": "Track your materials from pickup to processing"
+      },
+      "securePayments": {
+        "title": "Secure Payments",
+        "description": "Bank-grade security for all transactions"
+      }
+    },
+    "taglines": {
+      "farmerPower": "Farmer Power",
+      "cleanTomorrow": "Clean Tomorrow",
+      "ruralEnergy": "Rural Energy",
+      "traditionMeetsTech": "Tradition Meets Tech",
+      "wasteToWealth": "Waste to Wealth",
+      "ruralInnovation": "Rural Innovation",
+      "farmerPartners": "Farmer Partners",
+      "hardWorkCleanPower": "Hard Work, Clean Power",
+      "empoweringHands": "Empowering Hands",
+      "sustainableRoots": "Sustainable Roots",
+      "dungToDream": "Dung to Dream",
+      "smartLivelihoods": "Smart Livelihoods",
+      "greenVillages": "Green Villages",
+      "cleanOrigins": "Clean Origins",
+      "grownProgress": "Grown Progress",
+      "ruralStory": "Rural Story",
+      "drivingHope": "Driving Hope",
+      "farmerLeaders": "Farmer Leaders",
+      "fieldsToFuel": "Fields to Fuel",
+      "dignifiedEarning": "Dignified Earning",
+      "futureEnergy": "Future Energy",
+      "balancedGrowth": "Balanced Growth",
+      "pureProsperity": "Pure Prosperity",
+      "ruralStrength": "Rural Strength",
+      "villagePower": "Village Power"
+    },
+    "description": {
+      "line1": "Saubhagya connects farmers, gaushalas, and biogas plants through a smart, transparent, and eco-friendly system.",
+      "line2": "Our 4-step digital process turns agricultural waste into reliable income — ensuring fair payments, clean energy, and rural prosperity."
+    }
+  },
+  "benefits": {
+    "title": "Farmer Benefits",
+    "subtitle": "किसान लाभ",
+    "description": "Discover how Saubhagya transforms agricultural waste into sustainable income for farming communities across India.",
+    "keyBenefitsTitle": "Key Benefits at a Glance",
+    "mainBenefitsTitle": "Main Benefits",
+    "mainBenefitsSubtitle": "मुख्य लाभ",
+    "additionalAdvantagesTitle": "Additional Advantages",
+    "additionalAdvantagesSubtitle": "अतिरिक्त लाभ",
+    "readyToTransform": "Ready to Transform Your Income?",
+    "joinThousands": "Join thousands of farmers who have already benefited from Saubhagya",
+    "joinNow": "Join Now / अभी शामिल हों",
+    "learnMore": "Learn More / और जानें",
+    "keyBenefits": {
+      "fairPricing": "Fair Pricing:",
+      "fairPricingDesc": "₹3-5 per kg with transparent IoT-verified weighing at every collection",
+      "quickPayments": "Quick Payments:",
+      "quickPaymentsDesc": "Same-day payouts directly to your bank account or mobile wallet",
+      "steadyIncome": "Steady Income:",
+      "steadyIncomeDesc": "Earn ₹12,000-18,000 extra per month with 20-30 cattle",
+      "environmentalImpact": "Environmental Impact:",
+      "environmentalImpactDesc": "Reduce methane emissions by 40% while earning income"
+    },
+    "mainBenefits": {
+      "consistentIncome": {
+        "title": "Consistent Daily Income",
+        "subtitle": "दैनिक आय",
+        "description": "Transform waste into reliable, year-round income stream",
+        "details": "Earn ₹3-5 per kilogram of cattle dung with flexible daily collection schedules that fit your routine. Unlike seasonal crops, this income source remains consistent throughout the year regardless of weather or harvest cycles. A farmer with 25 cattle producing 250kg of dung daily can earn ₹750-1,250 per day, translating to ₹22,500-37,500 monthly. No upfront investment required - start earning from day one. The material you previously had to dispose of now becomes a valuable commodity with guaranteed buyers."
+      },
+      "incomeBoost": {
+        "title": "Significant Income Boost",
+        "subtitle": "बढ़ा हुआ मुनाफा",
+        "description": "30-50% increase in overall household income",
+        "details": "Our transparent, market-linked pricing ensures you receive competitive rates with quality bonuses for superior materials. This additional income stream requires minimal extra labor - you're already managing cattle, now you're monetizing their waste. For typical farming families earning ₹25,000-40,000 monthly from agriculture, Saubhagya adds ₹12,000-18,000 in supplementary income - a 30-50% boost. This extra income helps families afford better education for children, improved healthcare, agricultural investments, and emergency savings without taking loans."
+      },
+      "environmental": {
+        "title": "Environmental & Community Benefits",
+        "subtitle": "पर्यावरणीय प्रभाव",
+        "description": "Reduce emissions by 40% while improving community health",
+        "details": "By properly processing cattle dung through anaerobic digestion, you prevent uncontrolled methane release - a greenhouse gas 25 times more potent than CO₂. Each ton of dung you supply prevents approximately 25kg of methane emissions, equivalent to taking 1.5 cars off roads for a year. This also eliminates groundwater contamination, reduces fly and mosquito breeding, and improves village sanitation. The CBG produced replaces fossil fuels, supporting India's renewable energy targets. The digestate byproduct returned to you is nutrient-rich organic fertilizer, reducing chemical fertilizer costs by 20-30% while improving soil health for better crop yields."
+      }
+    },
+    "additionalBenefits": {
+      "transparentPricing": {
+        "title": "Transparent Pricing",
+        "description": "Real-time market rates with no hidden charges"
+      },
+      "qualityRewards": {
+        "title": "Quality Rewards",
+        "description": "Bonus payments for high-quality materials"
+      },
+      "guaranteedPayments": {
+        "title": "Guaranteed Payments",
+        "description": "Secure and timely payments every time"
+      },
+      "flexiblePickup": {
+        "title": "Flexible Pickup",
+        "description": "Convenient scheduling that fits your routine"
+      },
+      "communitySupport": {
+        "title": "Community Support",
+        "description": "Join a network of successful farmers"
+      },
+      "carbonCredits": {
+        "title": "Carbon Credits",
+        "description": "Earn additional income from carbon offset programs"
+      }
+    }
+  },
+  "users": {
+    "title": "Users",
+    "subtitle": "उपयोगकर्ता",
+    "description": "Our comprehensive digital ecosystem provides specialized tools for every stakeholder in the biogas value chain. Each platform is designed to streamline operations — with real-time monitoring, offline capabilities, and user-specific features designed to maximize efficiency and transparency.",
+    "keyFeatures": "Key Features",
+    "learnMore": "Learn More",
+    "readyToJoin": "Ready to Join Our Platform?",
+    "readyToJoinDesc": "Whether you're a field worker, operator, or administrator, we have the right tools for you.",
+    "getStartedToday": "Get Started Today"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "संपर्क करें",
+    "description": "Ready to start earning from your cattle dung and transform waste into wealth? Have questions about our process, pricing, or technology? Our dedicated multilingual support team is available to assist you every step of the way - from initial registration to your first payment and beyond.",
+    "quickContactGuide": "Quick Contact Guide",
+    "getInTouch": "Get In Touch",
+    "getInTouchSubtitle": "संपर्क में रहें",
+    "sendMessage": "Send us a Message",
+    "officeHours": "Office Hours",
+    "visitOffice": "Visit Our Office",
+    "howCanWeHelp": "How Can We Help?",
+    "howCanWeHelpSubtitle": "हम कैसे मदद कर सकते हैं?",
+    "faqTitle": "Frequently Asked Questions",
+    "faqSubtitle": "अक्सर पूछे जाने वाले प्रश्न",
+    "contactMethods": {
+      "phone": {
+        "title": "Call Us",
+        "subtitle": "हमें कॉल करें",
+        "details": "+91 98765 43210 (Mon-Sat, 9 AM - 6 PM)",
+        "description": "Talk directly with our dedicated support team in Hindi, English, Marathi, Gujarati. Avg. 2-min wait time. Available for registration, payments, and queries."
+      },
+      "whatsapp": {
+        "title": "WhatsApp Support",
+        "subtitle": "व्हाट्सऐप सहायता",
+        "details": "+91 98765 43211 (24x7 Support)",
+        "description": "Quick support for all queries. Send photos/videos. Track pickup, payment status, and get instant answers to common questions. Join our Farmer Group."
+      },
+      "email": {
+        "title": "Email Support",
+        "subtitle": "ईमेल सहायता",
+        "details": "support@saubhagya.com",
+        "description": "For detailed queries, technical issues, or documentation requests. Guaranteed response within 24 hours. Includes farmer group invitations and documentation."
+      },
+      "office": {
+        "title": "Visit Our Office",
+        "subtitle": "कार्यालय आएं",
+        "details": "Sector 14, Gurgaon, Haryana",
+        "description": "Schedule a personal meeting. Farmer orientation sessions every Wednesday. Bring Aadhar, bank passbook for instant registration."
+      }
+    },
+    "supportTypes": {
+      "registration": {
+        "title": "New Farmer Registration",
+        "description": "Get started with Saubhagya and begin earning",
+        "action": "Register Now"
+      },
+      "technical": {
+        "title": "Technical Support",
+        "description": "Help with app, weighing, or payment issues",
+        "action": "Get Help"
+      },
+      "business": {
+        "title": "Business Inquiries",
+        "description": "Partnership and business development",
+        "action": "Connect"
+      },
+      "general": {
+        "title": "General Questions",
+        "description": "Any other questions about our services",
+        "action": "Ask Us"
+      }
+    },
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "location": "Village/Location",
+      "cattle": "Number of Cattle",
+      "message": "Message",
+      "sendMessage": "Send Message"
+    },
+    "faqs": [
+      {
+        "question": "How quickly will I receive payment?",
+        "answer": "Payments are processed within 24 hours of material verification and directly transferred to your registered bank account."
+      },
+      {
+        "question": "What is the minimum quantity for pickup?",
+        "answer": "We collect minimum 50kg of cattle dung. For smaller quantities, you can accumulate and request pickup when ready."
+      },
+      {
+        "question": "How do you ensure fair weighing?",
+        "answer": "We use IoT-enabled digital weighing scales with real-time data recording. You receive SMS confirmation of weights immediately."
+      },
+      {
+        "question": "What are the quality requirements?",
+        "answer": "Fresh cattle dung with minimal contamination. Our team will guide you on proper storage and preparation methods."
+      },
+      {
+        "question": "Is there any registration fee?",
+        "answer": "No registration fees. Joining Saubhagya is completely free for farmers. We only earn when you earn."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Saubhagya",
+    "subtitle": "सौभाग्य के बारे में",
+    "description": "Transforming rural India through innovative agricultural waste management, creating sustainable income opportunities while contributing to clean energy solutions.",
+    "aboutGlance": "About Saubhagya - At a Glance",
+    "mission": "Our Mission",
+    "missionSubtitle": "हमारा मिशन",
+    "missionDescription": "To empower rural farming communities by creating sustainable income opportunities through innovative agricultural waste management, while contributing to India's clean energy goals and environmental sustainability.",
+    "missionDescription2": "We believe every farmer deserves fair compensation for their contributions to both agriculture and renewable energy production.",
+    "vision": "Our Vision",
+    "visionSubtitle": "हमारी दृष्टि",
+    "visionDescription": "To become India's leading agricultural waste-to-energy platform, serving over 10,000 farmers across rural India and contributing significantly to the nation's renewable energy capacity.",
+    "visionDescription2": "Through technology, transparency, and trust, we aim to revolutionize how rural communities participate in and benefit from the clean energy transition.",
+    "coreValues": "Our Core Values",
+    "coreValuesSubtitle": "हमारे मूल मूल्य",
+    "impact": "Our Impact",
+    "impactSubtitle": "हमारा प्रभाव",
+    "joinMission": "Join Our Mission",
+    "joinMissionDesc": "Be part of India's clean energy revolution while improving farmer livelihoods",
+    "getStartedToday": "Get Started Today / आज ही शुरू करें",
+    "glancePoints": {
+      "mission": "Mission:",
+      "missionDesc": "Empower farmers through sustainable waste-to-energy solutions with fair compensation and transparent operations",
+      "impact": "Impact:",
+      "impactDesc": "1000+ farmers earning ₹12,000-18,000/month while reducing emissions by 40%",
+      "technology": "Technology:",
+      "technologyDesc": "IoT-enabled weighing, GPS tracking, and real-time payment systems for complete transparency",
+      "promise": "Promise:",
+      "promiseDesc": "Same-day payments, fair pricing, and contributing to India's renewable energy goals"
+    },
+    "values": {
+      "community": {
+        "title": "Community First",
+        "subtitle": "समुदाय प्रथम",
+        "description": "Putting farmers and rural communities at the center of everything we do, ensuring their prosperity and wellbeing."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "subtitle": "पारदर्शिता",
+        "description": "Complete transparency in weighing, pricing, and payment processes with real-time tracking and verification."
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "subtitle": "गुणवत्ता आश्वासन",
+        "description": "Maintaining highest standards in collection and processing with certified quality control measures."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "subtitle": "स्थिरता",
+        "description": "Creating a sustainable future through clean energy solutions that benefit both farmers and environment."
+      }
+    },
+    "stats": {
+      "farmers": {
+        "number": "1000+",
+        "label": "Active Farmers",
+        "subtitle": "सक्रिय किसान"
+      },
+      "villages": {
+        "number": "50+",
+        "label": "Villages Served",
+        "subtitle": "सेवित गांव"
+      },
+      "payouts": {
+        "number": "₹2Cr+",
+        "label": "Farmer Payouts",
+        "subtitle": "किसान भुगतान"
+      },
+      "emissions": {
+        "number": "40%",
+        "label": "Emission Reduction",
+        "subtitle": "उत्सर्जन कमी"
+      }
+    }
+  },
+  "footer": {
+    "companyName": "Saubhagya",
+    "description": "Transforming rural economy through sustainable cattle dung to biogas conversion. Fair payments, transparent processes, and environmental benefits for farming communities.",
+    "joinFarmer": "Join as Farmer",
+    "requestPickup": "Request Pickup",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "farmerBenefits": "Farmer Benefits",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "phone": "+91 98765 43210",
+    "email": "join@saubhagya.com",
+    "address": "Agar Malwa, Madhya Pradesh",
+    "copyright": "© 2024 Saubhagya. All rights reserved. | गौशाला से रोज़ी",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "अक्सर पूछे जाने वाले प्रश्न",
+    "description": "Find answers to common questions about the Saubhagya scheme and our services. Use the navigation arrows or swipe to browse through the questions.",
+    "cantFind": "Can't find what you're looking for?",
+    "contactSupport": "Contact Support",
+    "navigation": {
+      "previous": "Previous FAQ",
+      "next": "Next FAQ"
+    },
+    "items": [
+      {
+        "question": "What is the Saubhagya scheme?",
+        "answer": "The Saubhagya scheme is a government initiative aimed at providing electricity connections to all households in rural and urban areas. It focuses on ensuring universal access to electricity and improving the quality of life for citizens."
+      },
+      {
+        "question": "How can I apply for a new electricity connection?",
+        "answer": "You can apply for a new electricity connection through our online portal, mobile app, or by visiting the nearest electricity board office. You will need to provide necessary documents like identity proof, address proof, and property documents."
+      },
+      {
+        "question": "What documents are required for connection?",
+        "answer": "Required documents include: Aadhaar card or valid ID proof, address proof (utility bill, rent agreement), property ownership documents, passport-size photographs, and filled application form."
+      },
+      {
+        "question": "How long does it take to get a new connection?",
+        "answer": "Typically, a new electricity connection is provided within 7-15 working days after submission of complete documents and payment of required fees. The timeline may vary based on technical feasibility and location."
+      },
+      {
+        "question": "What are the charges for a new connection?",
+        "answer": "Connection charges vary based on the type of connection (residential/commercial), load requirement, and location. Detailed tariff information is available on our website or you can contact customer service for specific quotes."
+      },
+      {
+        "question": "How can I pay my electricity bill?",
+        "answer": "You can pay your electricity bill through multiple channels: online payment portal, mobile app, bank branches, authorized collection centers, or through digital payment platforms like UPI, net banking, and credit/debit cards."
+      },
+      {
+        "question": "What should I do if there is a power outage?",
+        "answer": "In case of power outage, first check if it's a local issue by contacting neighbors. If it's a widespread outage, report it through our helpline number, mobile app, or online portal. Our technical team will address the issue promptly."
+      },
+      {
+        "question": "How can I register a complaint?",
+        "answer": "You can register complaints through our 24/7 helpline, online complaint portal, mobile app, or by visiting the nearest customer service center. Each complaint is assigned a unique reference number for tracking."
+      },
+      {
+        "question": "Is there any subsidy available under Saubhagya?",
+        "answer": "Yes, eligible households can receive subsidies for electricity connections under the Saubhagya scheme. The subsidy amount and eligibility criteria are determined based on government guidelines and household income levels."
+      },
+      {
+        "question": "How can I track my application status?",
+        "answer": "You can track your application status using the reference number provided at the time of application. Check the status through our website, mobile app, or by calling customer service with your application reference number."
+      }
+    ]
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "next": "Next",
+    "previous": "Previous",
+    "continue": "Continue",
+    "step": "Step",
+    "highlights": "HIGHLIGHTS",
+    "whyItMatters": "WHY IT MATTERS"
+  }
+}
