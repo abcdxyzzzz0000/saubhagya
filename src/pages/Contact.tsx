@@ -133,15 +133,15 @@ export const Contact = () => {
   return (
     <div className="min-h-screen relative">
       <div className="relative z-10">
-        <section className="pt-20 pb-20 bg-gradient-to-b from-gray-100 to-white">
+        <section className="pt-20 pb-20 bg-transparent">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
               Contact Us
             </h1>
-            <p className="text-2xl md:text-3xl mb-8 font-medium text-gray-700">
+            <p className="text-2xl md:text-3xl mb-8 font-medium text-black">
               संपर्क करें
             </p>
-            <p className="text-lg md:text-xl max-w-4xl mx-auto text-gray-600 leading-relaxed">
+            <p className="text-lg md:text-xl max-w-4xl mx-auto text-black leading-relaxed">
               Ready to start earning from your cattle dung and transform waste into wealth? Have
               questions about our process, pricing, or technology? Our dedicated multilingual
               support team is available to assist you every step of the way - from initial registration
@@ -150,27 +150,27 @@ export const Contact = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-transparent">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 border-l-4 border-primary">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Quick Contact Guide</h3>
+              <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-8 border-l-4 border-primary">
+                <h3 className="text-2xl font-bold text-black mb-6">Quick Contact Guide</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-muted-foreground"><strong className="text-foreground">Phone Support:</strong> Call +91 98765 43210 for immediate assistance. Available in Hindi, English, Marathi, and Gujarati. Average wait time under 2 minutes. Available for registration, payments, and technical support.</p>
+                    <p className="text-black"><strong className="text-black">Phone Support:</strong> Call +91 98765 43210 for immediate assistance. Available in Hindi, English, Marathi, and Gujarati. Average wait time under 2 minutes. Available for registration, payments, and technical support.</p>
                   </div>
                   <div className="flex gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-muted-foreground"><strong className="text-foreground">WhatsApp:</strong> Quick support via +91 98765 43211. Send photos, videos, or voice messages. Track pickup status, check payment history, and get instant answers to common questions. Join our farmer community group for tips and updates.</p>
+                    <p className="text-black"><strong className="text-black">WhatsApp:</strong> Quick support via +91 98765 43211. Send photos, videos, or voice messages. Track pickup status, check payment history, and get instant answers to common questions. Join our farmer community group for tips and updates.</p>
                   </div>
                   <div className="flex gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-muted-foreground"><strong className="text-foreground">Email:</strong> support@saubhagya.com for detailed queries, technical issues, or documentation requests. Guaranteed response within 24 hours. Include farmer group invitations and documentation.</p>
+                    <p className="text-black"><strong className="text-black">Email:</strong> support@saubhagya.com for detailed queries, technical issues, or documentation requests. Guaranteed response within 24 hours. Include farmer group invitations and documentation.</p>
                   </div>
                   <div className="flex gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-muted-foreground"><strong className="text-foreground">Office Hours:</strong> Mon-Fri 9AM-6PM, Sat 9AM-2PM for in-person support. Emergency pickup requests and payment issues available 24/7. Farmer orientation sessions every Wednesday. Bring Aadhar and bank passbook for instant registration.</p>
+                    <p className="text-black"><strong className="text-black">Office Hours:</strong> Mon-Fri 9AM-6PM, Sat 9AM-2PM for in-person support. Emergency pickup requests and payment issues available 24/7. Farmer orientation sessions every Wednesday. Bring Aadhar and bank passbook for instant registration.</p>
                   </div>
                 </div>
               </div>
@@ -178,36 +178,36 @@ export const Contact = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-white/95 backdrop-blur-sm">
+        <section className="py-20 bg-transparent">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 Get In Touch
               </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground">
+              <p className="text-xl md:text-2xl text-black">
                 संपर्क में रहें
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
               {contactMethods.map((method, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white/95 backdrop-blur-sm">
+                <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white/20 backdrop-blur-sm border border-white/30">
                   <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
                     <div className={`w-20 h-20 ${method.gradient} rounded-2xl flex items-center justify-center shadow-xl`}>
                       <method.icon className="w-10 h-10 text-background" />
                     </div>
                   </div>
                   <div className="p-6 text-center">
-                    <h3 className="text-xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl font-bold text-black mb-2">
                       {method.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-3 font-medium">
+                    <p className="text-sm text-black mb-3 font-medium">
                       {method.subtitle}
                     </p>
-                    <p className="text-lg font-semibold text-primary mb-3">
+                    <p className="text-lg font-semibold text-black mb-3">
                       {method.details}
                     </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-black leading-relaxed">
                       {method.description}
                     </p>
                   </div>
@@ -217,18 +217,18 @@ export const Contact = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-transparent">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
               {/* Send us a Message Form */}
-              <Card className="p-6 bg-white shadow-md rounded-xl border border-gray-200 h-full">
-                <h3 className="text-xl font-bold text-gray-800 mb-5">
+              <Card className="p-6 bg-white/20 backdrop-blur-sm shadow-md rounded-xl border border-white/30 h-full">
+                <h3 className="text-xl font-bold text-black mb-5">
                   Send us a Message
                 </h3>
                 <form className="space-y-4">
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <Label htmlFor="firstName" className="text-sm font-medium text-gray-600 mb-1 block">First Name *</Label>
+                      <Label htmlFor="firstName" className="text-sm font-medium text-black mb-1 block">First Name *</Label>
                       <Input
                         id="firstName"
                         placeholder="First Name"
@@ -236,7 +236,7 @@ export const Contact = () => {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="lastName" className="text-sm font-medium text-gray-600 mb-1 block">Last Name *</Label>
+                      <Label htmlFor="lastName" className="text-sm font-medium text-black mb-1 block">Last Name *</Label>
                       <Input
                         id="lastName"
                         placeholder="Last Name"
@@ -246,7 +246,7 @@ export const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-sm font-medium text-gray-600 mb-1 block">Phone Number *</Label>
+                    <Label htmlFor="phone" className="text-sm font-medium text-black mb-1 block">Phone Number *</Label>
                     <Input
                       id="phone"
                       placeholder="+91 XXXXX XXXXX"
@@ -255,7 +255,7 @@ export const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-sm font-medium text-gray-600 mb-1 block">Email Address</Label>
+                    <Label htmlFor="email" className="text-sm font-medium text-black mb-1 block">Email Address</Label>
                     <Input
                       id="email"
                       type="email"
@@ -265,7 +265,7 @@ export const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="location" className="text-sm font-medium text-gray-600 mb-1 block">Village/Location *</Label>
+                    <Label htmlFor="location" className="text-sm font-medium text-black mb-1 block">Village/Location *</Label>
                     <Input
                       id="location"
                       placeholder="Village/Location"
@@ -274,7 +274,7 @@ export const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="cattle" className="text-sm font-medium text-gray-600 mb-1 block">Number of Cattle</Label>
+                    <Label htmlFor="cattle" className="text-sm font-medium text-black mb-1 block">Number of Cattle</Label>
                     <Input
                       id="cattle"
                       placeholder="Number of Cattle"
@@ -283,7 +283,7 @@ export const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="message" className="text-sm font-medium text-gray-600 mb-1 block">Message *</Label>
+                    <Label htmlFor="message" className="text-sm font-medium text-black mb-1 block">Message *</Label>
                     <Textarea
                       id="message"
                       placeholder="Message"
@@ -303,33 +303,33 @@ export const Contact = () => {
               {/* Right Column */}
               <div className="h-full flex flex-col">
                 {/* Office Hours */}
-                <Card className="p-6 bg-white shadow-md rounded-xl border border-gray-200 flex-1 mb-6">
+                <Card className="p-6 bg-white/20 backdrop-blur-sm shadow-md rounded-xl border border-white/30 flex-1 mb-6">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-orange-400 rounded-lg flex items-center justify-center shadow-sm">
                       <Clock className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800">
+                    <h3 className="text-xl font-bold text-black">
                       Office Hours
                     </h3>
                   </div>
                   <div className="space-y-3">
                     {officeHours.map((schedule, index) => (
                       <div key={index} className="flex justify-between items-center py-1">
-                        <span className="text-gray-700 font-medium text-sm">{schedule.day}</span>
-                        <span className="text-gray-600 text-sm">{schedule.time}</span>
+                        <span className="text-black font-medium text-sm">{schedule.day}</span>
+                        <span className="text-black text-sm">{schedule.time}</span>
                       </div>
                     ))}
                   </div>
                 </Card>
 
                 {/* Visit Our Office */}
-                <Card className="p-6 bg-white shadow-md rounded-xl border border-gray-200 flex-1">
+                <Card className="p-6 bg-white/20 backdrop-blur-sm shadow-md rounded-xl border border-white/30 flex-1">
                   <div className="flex flex-col items-center text-center h-full justify-center">
                     <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-orange-400 rounded-xl flex items-center justify-center shadow-sm mb-4">
                       <MapPin className="w-7 h-7 text-white" />
                     </div>
-                    <h4 className="text-xl font-bold text-gray-800 mb-2">Visit Our Office</h4>
-                    <p className="text-gray-600 text-sm mb-3">Sector 14, Gurgaon, Haryana</p>
+                    <h4 className="text-xl font-bold text-black mb-2">Visit Our Office</h4>
+                    <p className="text-black text-sm mb-3">Sector 14, Gurgaon, Haryana</p>
                     <p className="text-green-600 text-xs font-medium cursor-pointer hover:text-green-700">
                       Click to view contact details →
                     </p>
@@ -340,30 +340,30 @@ export const Contact = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-white/95 backdrop-blur-sm">
+        <section className="py-20 bg-transparent">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 How Can We Help?
               </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground">
+              <p className="text-xl md:text-2xl text-black">
                 हम कैसे मदद कर सकते हैं?
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportTypes.map((support, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white/95 backdrop-blur-sm">
+                <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white/20 backdrop-blur-sm border border-white/30">
                   <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
                     <div className={`w-20 h-20 ${support.gradient} rounded-2xl flex items-center justify-center shadow-xl`}>
                       <support.icon className="w-10 h-10 text-background" />
                     </div>
                   </div>
                   <div className="p-6">
-                    <h4 className="text-xl font-bold text-foreground mb-4">
+                    <h4 className="text-xl font-bold text-black mb-4">
                       {support.title}
                     </h4>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-black mb-6 leading-relaxed">
                       {support.description}
                     </p>
                     <Button variant="outline" className="w-full h-12 text-base font-semibold">
@@ -376,24 +376,24 @@ export const Contact = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-white/95 backdrop-blur-sm">
+        <section className="py-20 bg-transparent">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground">
+              <p className="text-xl md:text-2xl text-black">
                 अक्सर पूछे जाने वाले प्रश्न
               </p>
             </div>
 
             <div className="max-w-4xl mx-auto space-y-6">
               {faqs.map((faq, index) => (
-                <Card key={index} className="p-8 hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm">
-                  <h4 className="text-xl font-bold text-foreground mb-4">
+                <Card key={index} className="p-8 hover:shadow-2xl transition-all duration-300 bg-white/20 backdrop-blur-sm border border-white/30">
+                  <h4 className="text-xl font-bold text-black mb-4">
                     {faq.question}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed text-base">
+                  <p className="text-black leading-relaxed text-base">
                     {faq.answer}
                   </p>
                 </Card>
@@ -402,7 +402,7 @@ export const Contact = () => {
           </div>
         </section>
 
-        <section className="py-24 bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur-sm">
+        <section className="py-24 bg-transparent">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white drop-shadow-lg">
               Need Immediate Help?

@@ -151,42 +151,42 @@ export const Benefits = () => {
   return (
     <div className="min-h-screen relative">
       <div className="relative z-10">
-        <section className="pt-20 pb-20 bg-gradient-to-b from-primary/10 to-white">
+        <section className="pt-20 pb-20 bg-transparent">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-black">
               Farmer Benefits
             </h1>
-            <p className="text-2xl md:text-3xl mb-8 font-medium text-foreground">
+            <p className="text-2xl md:text-3xl mb-8 font-medium text-black">
               किसान लाभ
             </p>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto text-black leading-relaxed">
               Discover how Saubhagya transforms agricultural waste into sustainable income
               for farming communities across India.
             </p>
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white/10 backdrop-blur-sm">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 border-l-4 border-primary">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Key Benefits at a Glance</h3>
+              <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border-l-4 border-primary border border-white/20">
+                <h3 className="text-2xl font-bold text-black mb-6">Key Benefits at a Glance</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-muted-foreground"><strong className="text-foreground">Fair Pricing:</strong> ₹3-5 per kg with transparent IoT-verified weighing at every collection</p>
+                    <p className="text-black"><strong className="text-black">Fair Pricing:</strong> ₹3-5 per kg with transparent IoT-verified weighing at every collection</p>
                   </div>
                   <div className="flex gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-muted-foreground"><strong className="text-foreground">Quick Payments:</strong> Same-day payouts directly to your bank account or mobile wallet</p>
+                    <p className="text-black"><strong className="text-black">Quick Payments:</strong> Same-day payouts directly to your bank account or mobile wallet</p>
                   </div>
                   <div className="flex gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-muted-foreground"><strong className="text-foreground">Steady Income:</strong> Earn ₹12,000-18,000 extra per month with 20-30 cattle</p>
+                    <p className="text-black"><strong className="text-black">Steady Income:</strong> Earn ₹12,000-18,000 extra per month with 20-30 cattle</p>
                   </div>
                   <div className="flex gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-muted-foreground"><strong className="text-foreground">Environmental Impact:</strong> Reduce methane emissions by 40% while earning income</p>
+                    <p className="text-black"><strong className="text-black">Environmental Impact:</strong> Reduce methane emissions by 40% while earning income</p>
                   </div>
                 </div>
               </div>
@@ -194,13 +194,13 @@ export const Benefits = () => {
           </div>
         </section>
 
-        <section className="py-24 bg-white/95 backdrop-blur-sm">
+        <section className="py-24 bg-white/10 backdrop-blur-sm">
           <div className="container mx-auto px-6">
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 Main Benefits
               </h2>
-              <p className="text-xl text-muted-foreground">मुख्य लाभ</p>
+              <p className="text-xl text-black">मुख्य लाभ</p>
             </div>
 
             {mainBenefits.map((benefit, index) => (
@@ -234,17 +234,17 @@ export const Benefits = () => {
                 </div>
 
                 <div className="lg:w-1/2">
-                  <Card className="p-10 shadow-2xl hover:shadow-3xl transition-all duration-300">
-                    <h3 className="text-3xl font-bold text-foreground mb-3">
+                  <Card className="p-10 shadow-2xl hover:shadow-3xl transition-all duration-300 bg-white/20 backdrop-blur-sm border border-white/30">
+                    <h3 className="text-3xl font-bold text-black mb-3">
                       {benefit.title}
                     </h3>
-                    <p className="text-xl text-muted-foreground mb-4 font-medium">
+                    <p className="text-xl text-black mb-4 font-medium">
                       {benefit.subtitle}
                     </p>
-                    <p className="text-lg text-primary font-semibold mb-6">
+                    <p className="text-lg text-black font-semibold mb-6">
                       {benefit.description}
                     </p>
-                    <p className="text-base text-muted-foreground leading-relaxed">
+                    <p className="text-base text-black leading-relaxed">
                       {benefit.details}
                     </p>
                   </Card>
@@ -254,13 +254,13 @@ export const Benefits = () => {
           </div>
         </section>
 
-        <section className="py-24 bg-white/95 backdrop-blur-sm overflow-hidden">
+        <section className="py-24 bg-white/10 backdrop-blur-sm overflow-hidden">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 Additional Advantages
               </h2>
-              <p className="text-xl text-primary font-semibold">अतिरिक्त लाभ</p>
+              <p className="text-xl text-black font-semibold">अतिरिक्त लाभ</p>
             </div>
 
             {/* 3D Circular Carousel */}
@@ -382,10 +382,10 @@ export const Benefits = () => {
                         </div>
 
                         <div className="p-5 text-center">
-                          <h4 className={`${isActive ? 'text-xl' : 'text-lg'} font-bold text-foreground mb-3 transition-all duration-700`}>
+                          <h4 className={`${isActive ? 'text-xl' : 'text-lg'} font-bold text-black mb-3 transition-all duration-700`}>
                             {benefit.title}
                           </h4>
-                          <p className={`${isActive ? 'text-sm' : 'text-xs'} text-muted-foreground leading-relaxed font-medium transition-all duration-700`}>
+                          <p className={`${isActive ? 'text-sm' : 'text-xs'} text-black leading-relaxed font-medium transition-all duration-700`}>
                             {benefit.description}
                           </p>
                         </div>
@@ -418,7 +418,7 @@ export const Benefits = () => {
           </div>
         </section>
 
-        <section className="py-24 bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur-sm">
+        <section className="py-24 bg-transparent">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white drop-shadow-lg">
               Ready to Transform Your Income?

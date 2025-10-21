@@ -65,7 +65,7 @@ export const GauSakhi = () => {
   ];
 
   return (
-    <div className="bg-green-600/20">
+    <div className="bg-transparent">
       {platforms.map((platform, index) => (
         <section key={platform.id} className="py-20">
           <div className="container mx-auto px-6">

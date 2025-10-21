@@ -45,17 +45,7 @@ export const Header = () => {
               >
                 {t('nav.home')}
               </Link>
-              <Link
-                to="/how-it-works"
-                className={`transition-smooth font-medium ${location.pathname === '/how-it-works'
-                  ? 'text-primary border-b-2 border-primary'
-                  : isHomePage
-                    ? 'text-white/90 hover:text-white drop-shadow-lg'
-                    : 'text-foreground hover:text-primary'
-                  }`}
-              >
-                {t('nav.howItWorks')}
-              </Link>
+
               <Link
                 to="/benefits"
                 className={`transition-smooth font-medium ${location.pathname === '/benefits'

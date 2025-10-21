@@ -4,25 +4,14 @@ import { ArrowRight, Leaf, Cog, Users, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "../hooks/react-i18next";
 import GauSakhi from "@/components/GauSakhi";
-import natureBackground from "../assets/nature.jpeg";
+
+import DignifiedEarning from "@/components/DignifiedEarning";
 
 export const Home = () => {
   const { t } = useTranslation();
 
   return (
     <div className="min-h-screen relative">
-      {/* Static background image covering entire page */}
-      <div
-        className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
-        style={{
-          backgroundImage: `url(${natureBackground})`
-        }}
-      >
-        {/* Background overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
-      </div>
-
-      <div className="relative z-10">
         <section className="min-h-screen flex items-center overflow-hidden pt-20 relative">
           <div className="container mx-auto px-6 py-20 relative z-10">
             <div className="max-w-5xl mx-auto">
@@ -50,6 +39,8 @@ export const Home = () => {
           </div>
         </section>
 
+        <DignifiedEarning />
+
         <GauSakhi />
 
         <section className="py-24">
@@ -73,7 +64,7 @@ export const Home = () => {
                 </div>
                 <div className="p-6 text-center flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-foreground mb-3">{t('cards.forFarmers.title')}</h3>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
+                  <p className="text-black mb-6 text-sm leading-relaxed flex-grow">
                     {t('cards.forFarmers.description')}
                   </p>
                   <Link to="/benefits">
@@ -93,10 +84,10 @@ export const Home = () => {
                 </div>
                 <div className="p-6 text-center flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-foreground mb-3">{t('cards.howItWorks.title')}</h3>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
+                  <p className="text-black mb-6 text-sm leading-relaxed flex-grow">
                     {t('cards.howItWorks.description')}
                   </p>
-                  <Link to="/how-it-works">
+                  <Link to="/benefits">
                     <Button className="bg-green-600 hover:bg-green-700 text-white h-10 px-4 text-sm font-medium w-full rounded-lg transition-all duration-300 group/btn">
                       {t('cards.howItWorks.button')} <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </Button>
@@ -113,7 +104,7 @@ export const Home = () => {
                 </div>
                 <div className="p-6 text-center flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-foreground mb-3">{t('cards.platformUsers.title')}</h3>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
+                  <p className="text-black mb-6 text-sm leading-relaxed flex-grow">
                     {t('cards.platformUsers.description')}
                   </p>
                   <Link to="/user-types">
@@ -133,7 +124,7 @@ export const Home = () => {
                 </div>
                 <div className="p-6 text-center flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-foreground mb-3">{t('cards.getStarted.title')}</h3>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
+                  <p className="text-black mb-6 text-sm leading-relaxed flex-grow">
                     {t('cards.getStarted.description')}
                   </p>
                   <Link to="/contact">
@@ -146,7 +137,6 @@ export const Home = () => {
             </div>
           </div>
         </section>
-      </div>
     </div>
   );
 };

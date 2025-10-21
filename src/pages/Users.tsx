@@ -113,28 +113,28 @@ export const Users = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-transparent">
             {/* Header Section */}
-            <section className="pt-20 pb-16 bg-white">
+            <section className="pt-20 pb-16 bg-transparent">
                 <div className="container mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">
                         {t('users.title')}
                     </h1>
-                    <p className="text-xl md:text-2xl mb-8 text-gray-600">
+                    <p className="text-xl md:text-2xl mb-8 text-black">
                         {t('users.subtitle')}
                     </p>
-                    <p className="text-lg max-w-4xl mx-auto text-gray-600 leading-relaxed">
+                    <p className="text-lg max-w-4xl mx-auto text-black leading-relaxed">
                         {t('users.description')}
                     </p>
                 </div>
             </section>
 
             {/* User Cards Grid */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-16 bg-transparent">
                 <div className="container mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                         {userTypes.map((user, index) => (
-                            <Card key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                            <Card key={index} className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                                 {/* Image Header */}
                                 <div className="relative h-48 overflow-hidden">
                                     <img
@@ -156,7 +156,7 @@ export const Users = () => {
 
                                 {/* Content */}
                                 <div className="p-6">
-                                    <p className="text-gray-600 mb-6 leading-relaxed">
+                                    <p className="text-black mb-6 leading-relaxed">
                                         {user.description}
                                     </p>
 
@@ -164,13 +164,13 @@ export const Users = () => {
                                     <div className="mb-6">
                                         <div className="flex items-center gap-2 mb-4">
                                             <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                            <h4 className="font-semibold text-gray-900">{t('users.keyFeatures')}</h4>
+                                            <h4 className="font-semibold text-black">{t('users.keyFeatures')}</h4>
                                         </div>
                                         <ul className="space-y-3">
                                             {user.features.map((feature, featureIndex) => (
                                                 <li key={featureIndex} className="flex items-start gap-3">
                                                     <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
-                                                    <span className="text-sm text-gray-600 leading-relaxed">
+                                                    <span className="text-sm text-black leading-relaxed">
                                                         {feature}
                                                     </span>
                                                 </li>
@@ -190,13 +190,13 @@ export const Users = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="py-16 bg-gray-100">
+            <section className="py-16 bg-transparent">
                 <div className="container mx-auto px-6 text-center">
-                    <div className="max-w-3xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    <div className="max-w-3xl mx-auto bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-8 shadow-lg">
+                        <h2 className="text-3xl font-bold text-black mb-4">
                             {t('users.readyToJoin')}
                         </h2>
-                        <p className="text-gray-600 mb-8 leading-relaxed">
+                        <p className="text-black mb-8 leading-relaxed">
                             {t('users.readyToJoinDesc')}
                         </p>
                         <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
