@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Users, Truck, TrendingUp } from "lucide-react";
 import heroImage from "@/assets/hero-farming.jpg";
+import { useTranslation } from "@/hooks/react-i18next";
 
 export const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <section id="home" className="relative min-h-screen bg-gradient-hero flex items-center overflow-hidden">
       {/* Background Image */}
@@ -18,24 +20,24 @@ export const HeroSection = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl font-bold text-background mb-6 leading-tight">
-              From Dung to Dhan
+              {t('hero.title')}
             </h1>
             <p className="text-xl md:text-2xl text-background/90 mb-4 font-medium">
-              गौशाला से रोज़ी — किसानों के लिए न्यायपूर्ण भुगतान
+              {t('hero.subtitle')}
             </p>
             <p className="text-lg text-background/80 mb-8 max-w-lg mx-auto lg:mx-0">
-              IoT-verified weighments, same-day payouts, local CBG production
+              {t('hero.description')}
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="lg" className="text-lg px-8 py-6 transition-all duration-300 ease-in-out">
                 <Users className="w-5 h-5" />
-                Join as Farmer / फार्मर बनें
+                {t('hero.joinFarmer')}
               </Button>
               <Button variant="hero" size="lg" className="text-lg px-8 py-6 transition-all duration-300 ease-in-out">
                 <Truck className="w-5 h-5" />
-                Request Pickup / रिक्वेस्ट पिकअप
+                {t('hero.requestPickup')}
               </Button>
             </div>
           </div>
@@ -49,8 +51,7 @@ export const HeroSection = () => {
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary">+30%</div>
-                  <div className="text-sm text-muted-foreground">Farmer Income Increase</div>
-                  <div className="text-sm text-muted-foreground">किसान आय वृद्धि</div>
+                  <div className="text-sm text-muted-foreground">{t('hero.stats.incomeIncrease')}</div>
                 </div>
               </div>
             </Card>
@@ -62,8 +63,7 @@ export const HeroSection = () => {
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-secondary">&gt;90%</div>
-                  <div className="text-sm text-muted-foreground">CBG Yield Efficiency</div>
-                  <div className="text-sm text-muted-foreground">CBG उत्पादन दक्षता</div>
+                  <div className="text-sm text-muted-foreground">{t('hero.stats.cbgEfficiency')}</div>
                 </div>
               </div>
             </Card>
@@ -75,8 +75,7 @@ export const HeroSection = () => {
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary">40%</div>
-                  <div className="text-sm text-muted-foreground">Methane Reduction</div>
-                  <div className="text-sm text-muted-foreground">मीथेन कमी</div>
+                  <div className="text-sm text-muted-foreground">{t('hero.stats.methaneReduction')}</div>
                 </div>
               </div>
             </Card>

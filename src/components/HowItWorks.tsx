@@ -1,37 +1,39 @@
 import { Card } from "@/components/ui/card";
 import { Scale, Truck, Factory, DollarSign } from "lucide-react";
+import { useTranslation } from "@/hooks/react-i18next";
 import farmersWorking from "@/assets/farmers-working.jpg";
 import smartTransport from "@/assets/smart-transport.jpg";
 import biogasFacility from "@/assets/biogas-facility.jpg";
 
 export const HowItWorks = () => {
+  const { t } = useTranslation();
   const steps = [
     {
       icon: Scale,
-      title: "Smart Collection",
-      subtitle: "स्मार्ट संग्रह",
-      description: "IoT-verified weighing and instant recording",
+      titleKey: 'howItWorks.steps.step1.title',
+      subtitleKey: 'howItWorks.steps.step1.subtitle',
+      descriptionKey: 'howItWorks.steps.step1.shortDescription',
       gradient: "bg-gradient-hero"
     },
     {
       icon: Truck,
-      title: "Safe Transport",
-      subtitle: "सुरक्षित परिवहन",
-      description: "GPS-tracked pickup from your gaushala",
+      titleKey: 'howItWorks.steps.step2.title',
+      subtitleKey: 'howItWorks.steps.step2.subtitle',
+      descriptionKey: 'howItWorks.steps.step2.shortDescription',
       gradient: "bg-gradient-earth"
     },
     {
       icon: Factory,
-      title: "CBG Production",
-      subtitle: "CBG उत्पादन",
-      description: "Clean biogas processing locally",
+      titleKey: 'howItWorks.steps.step3.title',
+      subtitleKey: 'howItWorks.steps.step3.subtitle',
+      descriptionKey: 'howItWorks.steps.step3.shortDescription',
       gradient: "bg-gradient-warm"
     },
     {
       icon: DollarSign,
-      title: "Fair Payment",
-      subtitle: "न्यायपूर्ण भुगतान",
-      description: "Same-day payout to your account",
+      titleKey: 'howItWorks.steps.step4.title',
+      subtitleKey: 'howItWorks.steps.step4.subtitle',
+      descriptionKey: 'howItWorks.steps.step4.shortDescription',
       gradient: "bg-primary"
     }
   ];
@@ -41,10 +43,10 @@ export const HowItWorks = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            How It Works
+            {t('howItWorks.title')}
           </h2>
           <p className="text-xl text-muted-foreground">
-            यह कैसे काम करता है
+            {t('howItWorks.processOverview')}
           </p>
         </div>
 
@@ -76,13 +78,13 @@ export const HowItWorks = () => {
                   <step.icon className="w-8 h-8 text-background" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">
-                  {step.title}
+                  {t(step.titleKey)}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4 font-medium">
-                  {step.subtitle}
+                  {t(step.subtitleKey)}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  {step.description}
+                  {t(step.descriptionKey)}
                 </p>
                 
                 {/* Step Number */}

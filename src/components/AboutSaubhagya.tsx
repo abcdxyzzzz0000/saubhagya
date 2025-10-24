@@ -1,12 +1,9 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/react-i18next";
 
 export const AboutSaubhagya = () => {
-  const [isHindi, setIsHindi] = useState(false);
-
-  const toggleLanguage = (language: 'english' | 'hindi') => {
-    setIsHindi(language === 'hindi');
-  };
+  const { t, i18n } = useTranslation();
+  const isHindi = i18n.language === 'hi';
 
   return (
     <section className="bg-[#f9fafb] py-16 px-6 lg:px-20">
@@ -14,37 +11,31 @@ export const AboutSaubhagya = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-8">
-            <button
-              onClick={() => toggleLanguage('english')}
-              className={`text-2xl sm:text-3xl md:text-4xl font-bold transition-all duration-300 ease-in-out hover:scale-105 ${!isHindi
+            <div className={`text-2xl sm:text-3xl md:text-4xl font-bold transition-all duration-300 ease-in-out ${!isHindi
                 ? 'text-green-700 border-b-4 border-green-700 pb-2'
-                : 'text-gray-500 hover:text-gray-700'
+                : 'text-gray-500'
                 }`}
             >
-              About Saubhagya Project
-            </button>
+              {t('about.title')}
+            </div>
 
             <div className="hidden sm:block text-2xl text-gray-400">|</div>
 
-            <button
-              onClick={() => toggleLanguage('hindi')}
-              className={`text-2xl sm:text-3xl md:text-4xl font-bold transition-all duration-300 ease-in-out hover:scale-105 ${isHindi
+            <div className={`text-2xl sm:text-3xl md:text-4xl font-bold transition-all duration-300 ease-in-out ${isHindi
                 ? 'text-green-700 border-b-4 border-green-700 pb-2'
-                : 'text-gray-500 hover:text-gray-700'
+                : 'text-gray-500'
                 }`}
             >
-              सौभाग्य परियोजना के बारे में
-            </button>
+              {t('about.subtitle')}
+            </div>
           </div>
         </div>
 
         {/* Content Area */}
-        <AnimatePresence mode="wait">
-          <motion.div
+        <motion.div
             key={isHindi ? 'hindi' : 'english'}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             {!isHindi ? (
@@ -153,7 +144,6 @@ export const AboutSaubhagya = () => {
               </div>
             )}
           </motion.div>
-        </AnimatePresence>
 
         {/* Core Values and Impact Section */}
         <div className="bg-gray-50 py-20 mt-16 -mx-6 lg:-mx-20">
@@ -319,10 +309,7 @@ export const AboutSaubhagya = () => {
         {/* Footer Note */}
         <div className="text-center mt-12">
           <p className="text-sm text-gray-500">
-            {isHindi
-              ? 'भाषा बदलने के लिए ऊपर दिए गए शीर्षक पर क्लिक करें'
-              : 'Click on the headings above to switch language'
-            }
+            {t('aboutSaubhagya.languageNote')}
           </p>
         </div>
       </div>

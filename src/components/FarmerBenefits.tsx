@@ -1,27 +1,29 @@
 import { Card } from "@/components/ui/card";
 import { Clock, Shield, Briefcase } from "lucide-react";
+import { useTranslation } from "@/hooks/react-i18next";
 
 export const FarmerBenefits = () => {
+  const { t } = useTranslation();
   const benefits = [
     {
       icon: Clock,
-      title: "Instant Payouts",
-      subtitle: "तत्काल भुगतान",
-      description: "Get paid the same day your contribution is processed. No waiting, no delays.",
+      titleKey: 'farmerBenefits.instantPayouts.title',
+      subtitleKey: 'farmerBenefits.instantPayouts.subtitle',
+      descriptionKey: 'farmerBenefits.instantPayouts.description',
       color: "text-secondary"
     },
     {
       icon: Shield,
-      title: "Zero Disputes", 
-      subtitle: "शून्य विवाद",
-      description: "IoT-verified weighing ensures transparent and accurate measurements every time.",
+      titleKey: 'farmerBenefits.zeroDisputes.title',
+      subtitleKey: 'farmerBenefits.zeroDisputes.subtitle',
+      descriptionKey: 'farmerBenefits.zeroDisputes.description',
       color: "text-primary"
     },
     {
       icon: Briefcase,
-      title: "Local Jobs",
-      subtitle: "स्थानीय नौकरियां",
-      description: "Creating employment opportunities in your village through local CBG production.",
+      titleKey: 'farmerBenefits.localJobs.title',
+      subtitleKey: 'farmerBenefits.localJobs.subtitle',
+      descriptionKey: 'farmerBenefits.localJobs.description',
       color: "text-secondary"
     }
   ];
@@ -31,10 +33,10 @@ export const FarmerBenefits = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Farmer Benefits
+            {t('benefits.title')}
           </h2>
           <p className="text-xl text-muted-foreground">
-            किसान लाभ
+            {t('benefits.subtitle')}
           </p>
         </div>
 
@@ -46,14 +48,14 @@ export const FarmerBenefits = () => {
                   <benefit.icon className="w-8 h-8 text-background" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {benefit.title}
+                  {t(benefit.titleKey)}
                 </h3>
                 <p className="text-lg font-medium text-muted-foreground mb-4">
-                  {benefit.subtitle}
+                  {t(benefit.subtitleKey)}
                 </p>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
+                {t(benefit.descriptionKey)}
               </p>
               
               {/* Decorative element */}

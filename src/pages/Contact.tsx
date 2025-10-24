@@ -3,425 +3,408 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock, MessageSquare, UserPlus, Headphones, Briefcase, HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Phone, Mail, MapPin, MessageSquare, X } from "lucide-react";
+import { useState } from "react";
+import { useTranslation } from "../hooks/react-i18next";
+import { motion } from "framer-motion";
+import villageLife from "@/assets/village-life.jpg";
+// Note: Save your QR code image as src/assets/whatsapp-qr.png
+// import whatsappQR from "@/assets/whatsapp-qr.png";
 
 export const Contact = () => {
-  const [activeHelpIndex, setActiveHelpIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const { t } = useTranslation();
+  const [showQR, setShowQR] = useState(false);
 
+  // Simplified contact methods
   const contactMethods = [
     {
       icon: Phone,
-      title: "Call Us",
-      subtitle: "हमें कॉल करें",
-      details: "+91 98765 43210 (Mon-Sat, 9 AM - 6 PM)",
-      description: "Talk directly with our dedicated support team in Hindi, English, Marathi, Gujarati. Avg. 2-min wait time. Available for registration, payments, and queries.",
-      gradient: "bg-gradient-to-br from-green-700 to-green-900"
+      title: t('contact.simple.call.title'),
+      details: t('contact.simple.call.details')
     },
     {
       icon: MessageSquare,
-      title: "WhatsApp Support",
-      subtitle: "व्हाट्सऐप सहायता",
-      details: "+91 98765 43211 (24x7 Support)",
-      description: "Quick support for all queries. Send photos/videos. Track pickup, payment status, and get instant answers to common questions. Join our Farmer Group.",
-      gradient: "bg-gradient-to-br from-green-400 to-green-600"
+      title: t('contact.simple.whatsapp.title'),
+      details: t('contact.simple.whatsapp.details')
     },
     {
       icon: Mail,
-      title: "Email Support",
-      subtitle: "ईमेल सहायता",
-      details: "support@saubhagya.com",
-      description: "For detailed queries, technical issues, or documentation requests. Guaranteed response within 24 hours. Includes farmer group invitations and documentation.",
-      gradient: "bg-gradient-to-br from-yellow-300 to-orange-400"
+      title: t('contact.simple.email.title'),
+      details: t('contact.simple.email.details')
     },
     {
       icon: MapPin,
-      title: "Visit Our Office",
-      subtitle: "कार्यालय आएं",
-      details: "Sector 14, Gurgaon, Haryana",
-      description: "Schedule a personal meeting. Farmer orientation sessions every Wednesday. Bring Aadhar, bank passbook for instant registration.",
-      gradient: "bg-gradient-to-br from-blue-600 to-green-700"
+      title: t('contact.simple.visit.title'),
+      details: t('contact.simple.visit.details')
     }
   ];
 
-  const supportTypes = [
+  // Field team members
+  const fieldTeam = [
     {
-      icon: UserPlus,
-      title: "New Farmer Registration",
-      description: "Get started with Saubhagya and begin earning",
-      action: "Register Now",
-      gradient: "bg-gradient-to-br from-green-500 to-orange-400"
+      name: t('contact.fieldTeam.member1.name'),
+      role: t('contact.fieldTeam.member1.role'),
+      image: villageLife
     },
     {
-      icon: Headphones,
-      title: "Technical Support",
-      description: "Help with app, weighing, or payment issues",
-      action: "Get Help",
-      gradient: "bg-gradient-to-br from-blue-400 to-blue-600"
+      name: t('contact.fieldTeam.member2.name'),
+      role: t('contact.fieldTeam.member2.role'),
+      image: villageLife
     },
     {
-      icon: Briefcase,
-      title: "Business Inquiries",
-      description: "Partnership and business development",
-      action: "Connect",
-      gradient: "bg-gradient-to-br from-purple-400 to-purple-600"
-    },
-    {
-      icon: HelpCircle,
-      title: "General Questions",
-      description: "Any other questions about our services",
-      action: "Ask Us",
-      gradient: "bg-gradient-to-br from-teal-400 to-teal-600"
+      name: t('contact.fieldTeam.member3.name'),
+      role: t('contact.fieldTeam.member3.role'),
+      image: villageLife
     }
   ];
 
-  // Auto-rotate carousel every 4 seconds
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    const interval = setInterval(() => {
-      setActiveHelpIndex((prev) => (prev + 1) % supportTypes.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, supportTypes.length]);
-
-  // Navigation functions
-  const goToNext = () => {
-    setActiveHelpIndex((prev) => (prev + 1) % supportTypes.length);
-    setIsAutoPlaying(false);
-  };
-
-  const goToPrevious = () => {
-    setActiveHelpIndex((prev) => (prev - 1 + supportTypes.length) % supportTypes.length);
-    setIsAutoPlaying(false);
-  };
-
-  const goToSlide = (index: number) => {
-    setActiveHelpIndex(index);
-    setIsAutoPlaying(false);
-  };
-
-  const faqs = [
-    {
-      question: "How quickly will I receive payment?",
-      answer: "Payments are processed within 24 hours of material verification and directly transferred to your registered bank account."
-    },
-    {
-      question: "What is the minimum quantity for pickup?",
-      answer: "We collect minimum 50kg of cattle dung. For smaller quantities, you can accumulate and request pickup when ready."
-    },
-    {
-      question: "How do you ensure fair weighing?",
-      answer: "We use IoT-enabled digital weighing scales with real-time data recording. You receive SMS confirmation of weights immediately."
-    },
-    {
-      question: "What are the quality requirements?",
-      answer: "Fresh cattle dung with minimal contamination. Our team will guide you on proper storage and preparation methods."
-    },
-    {
-      question: "Is there any registration fee?",
-      answer: "No registration fees. Joining Saubhagya is completely free for farmers. We only earn when you earn."
-    }
-  ];
-
-  const officeHours = [
-    { day: "Monday - Friday", time: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", time: "9:00 AM - 2:00 PM" },
-    { day: "Sunday", time: "Emergency Support Only" }
-  ];
+  const faqs = t('contact.faqs', { returnObjects: true }) as Array<{question: string, answer: string}>;
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative font-['Inter',sans-serif]">
       <div className="relative z-10">
-        <section className="pt-20 pb-20 bg-transparent">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 bg-transparent">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
-              Contact Us
-            </h1>
-            <p className="text-2xl md:text-3xl mb-8 font-medium text-black">
-              संपर्क करें
-            </p>
-            <p className="text-lg md:text-xl max-w-4xl mx-auto text-black leading-relaxed">
-              Ready to start earning from your cattle dung and transform waste into wealth? Have
-              questions about our process, pricing, or technology? Our dedicated multilingual
-              support team is available to assist you every step of the way - from initial registration
-              to your first payment and beyond.
-            </p>
+            <motion.h1 
+              className="text-4xl md:text-5xl font-bold mb-4 text-[#2E5B3A]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              {t('contact.hero.title')}
+            </motion.h1>
+            <motion.p 
+              className="text-lg md:text-xl max-w-3xl mx-auto text-gray-700"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              {t('contact.hero.subtitle')}
+            </motion.p>
           </div>
         </section>
 
-        <section className="py-16 bg-transparent">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-8 border-l-4 border-primary">
-                <h3 className="text-2xl font-bold text-black mb-6">Quick Contact Guide</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-black"><strong className="text-black">Phone Support:</strong> Call +91 98765 43210 for immediate assistance. Available in Hindi, English, Marathi, and Gujarati. Average wait time under 2 minutes. Available for registration, payments, and technical support.</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-black"><strong className="text-black">WhatsApp:</strong> Quick support via +91 98765 43211. Send photos, videos, or voice messages. Track pickup status, check payment history, and get instant answers to common questions. Join our farmer community group for tips and updates.</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-black"><strong className="text-black">Email:</strong> support@saubhagya.com for detailed queries, technical issues, or documentation requests. Guaranteed response within 24 hours. Include farmer group invitations and documentation.</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-black"><strong className="text-black">Office Hours:</strong> Mon-Fri 9AM-6PM, Sat 9AM-2PM for in-person support. Emergency pickup requests and payment issues available 24/7. Farmer orientation sessions every Wednesday. Bring Aadhar and bank passbook for instant registration.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 bg-transparent">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Get In Touch
-              </h2>
-              <p className="text-xl md:text-2xl text-black">
-                संपर्क में रहें
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        {/* Simplified Contact Cards - 2x2 Grid */}
+        <section className="py-10 px-6 bg-transparent">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {contactMethods.map((method, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white/20 backdrop-blur-sm border border-white/30">
-                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                    <div className={`w-20 h-20 ${method.gradient} rounded-2xl flex items-center justify-center shadow-xl`}>
-                      <method.icon className="w-10 h-10 text-background" />
-                    </div>
-                  </div>
-                  <div className="p-6 text-center">
-                    <h3 className="text-xl font-bold text-black mb-2">
-                      {method.title}
-                    </h3>
-                    <p className="text-sm text-black mb-3 font-medium">
-                      {method.subtitle}
-                    </p>
-                    <p className="text-lg font-semibold text-black mb-3">
-                      {method.details}
-                    </p>
-                    <p className="text-sm text-black leading-relaxed">
-                      {method.description}
-                    </p>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 bg-transparent">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
-              {/* Send us a Message Form */}
-              <Card className="p-6 bg-white/20 backdrop-blur-sm shadow-md rounded-xl border border-white/30 h-full">
-                <h3 className="text-xl font-bold text-black mb-5">
-                  Send us a Message
-                </h3>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <Label htmlFor="firstName" className="text-sm font-medium text-black mb-1 block">First Name *</Label>
-                      <Input
-                        id="firstName"
-                        placeholder="First Name"
-                        className="h-10 bg-gray-50 border-gray-300 rounded-md text-sm focus:border-green-500 focus:ring-green-500"
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="lastName" className="text-sm font-medium text-black mb-1 block">Last Name *</Label>
-                      <Input
-                        id="lastName"
-                        placeholder="Last Name"
-                        className="h-10 bg-gray-50 border-gray-300 rounded-md text-sm focus:border-green-500 focus:ring-green-500"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="phone" className="text-sm font-medium text-black mb-1 block">Phone Number *</Label>
-                    <Input
-                      id="phone"
-                      placeholder="+91 XXXXX XXXXX"
-                      className="h-10 bg-gray-50 border-gray-300 rounded-md text-sm focus:border-green-500 focus:ring-green-500"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="email" className="text-sm font-medium text-black mb-1 block">Email Address</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your.email@example.com"
-                      className="h-10 bg-gray-50 border-gray-300 rounded-md text-sm focus:border-green-500 focus:ring-green-500"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="location" className="text-sm font-medium text-black mb-1 block">Village/Location *</Label>
-                    <Input
-                      id="location"
-                      placeholder="Village/Location"
-                      className="h-10 bg-gray-50 border-gray-300 rounded-md text-sm focus:border-green-500 focus:ring-green-500"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="cattle" className="text-sm font-medium text-black mb-1 block">Number of Cattle</Label>
-                    <Input
-                      id="cattle"
-                      placeholder="Number of Cattle"
-                      className="h-10 bg-gray-50 border-gray-300 rounded-md text-sm focus:border-green-500 focus:ring-green-500"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message" className="text-sm font-medium text-black mb-1 block">Message *</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Message"
-                      className="h-24 bg-gray-50 border-gray-300 rounded-md text-sm focus:border-green-500 focus:ring-green-500 resize-none"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full h-11 bg-green-700 hover:bg-green-800 text-white font-medium rounded-md transition-colors text-sm shadow-sm"
-                  >
-                    Send Message
-                  </Button>
-                </form>
-              </Card>
-
-              {/* Right Column */}
-              <div className="h-full flex flex-col">
-                {/* Office Hours */}
-                <Card className="p-6 bg-white/20 backdrop-blur-sm shadow-md rounded-xl border border-white/30 flex-1 mb-6">
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-orange-400 rounded-lg flex items-center justify-center shadow-sm">
-                      <Clock className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-black">
-                      Office Hours
-                    </h3>
-                  </div>
-                  <div className="space-y-3">
-                    {officeHours.map((schedule, index) => (
-                      <div key={index} className="flex justify-between items-center py-1">
-                        <span className="text-black font-medium text-sm">{schedule.day}</span>
-                        <span className="text-black text-sm">{schedule.time}</span>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="p-6 bg-[#F1F8F4] rounded-2xl shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 border-0">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-[#2E5B3A] rounded-full flex items-center justify-center flex-shrink-0">
+                        <method.icon className="w-6 h-6 text-white" />
                       </div>
-                    ))}
-                  </div>
-                </Card>
-
-                {/* Visit Our Office */}
-                <Card className="p-6 bg-white/20 backdrop-blur-sm shadow-md rounded-xl border border-white/30 flex-1">
-                  <div className="flex flex-col items-center text-center h-full justify-center">
-                    <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-orange-400 rounded-xl flex items-center justify-center shadow-sm mb-4">
-                      <MapPin className="w-7 h-7 text-white" />
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                          {method.title}
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          {method.details}
+                        </p>
+                      </div>
                     </div>
-                    <h4 className="text-xl font-bold text-black mb-2">Visit Our Office</h4>
-                    <p className="text-black text-sm mb-3">Sector 14, Gurgaon, Haryana</p>
-                    <p className="text-green-600 text-xs font-medium cursor-pointer hover:text-green-700">
-                      Click to view contact details →
-                    </p>
-                  </div>
-                </Card>
-              </div>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-transparent">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                How Can We Help?
+        {/* Meet Our Field Team */}
+        <section className="py-10 px-6 bg-[#FDFBF8]">
+          <div className="container mx-auto">
+            <motion.div 
+              className="text-center mb-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                {t('contact.fieldTeam.title')}
               </h2>
-              <p className="text-xl md:text-2xl text-black">
-                हम कैसे मदद कर सकते हैं?
-              </p>
-            </div>
+              <p className="text-gray-600">{t('contact.fieldTeam.subtitle')}</p>
+            </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {supportTypes.map((support, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white/20 backdrop-blur-sm border border-white/30">
-                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                    <div className={`w-20 h-20 ${support.gradient} rounded-2xl flex items-center justify-center shadow-xl`}>
-                      <support.icon className="w-10 h-10 text-background" />
+            <div className="flex gap-6 overflow-x-auto pb-4 max-w-5xl mx-auto scrollbar-hide">
+              {fieldTeam.map((member, index) => (
+                <motion.div
+                  key={index}
+                  className="flex-shrink-0"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.15 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all w-64 text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-[#2E5B3A]">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <h4 className="text-xl font-bold text-black mb-4">
-                      {support.title}
+                    <h4 className="text-lg font-bold text-gray-800 mb-1">
+                      {member.name}
                     </h4>
-                    <p className="text-black mb-6 leading-relaxed">
-                      {support.description}
+                    <p className="text-sm text-gray-600">
+                      {member.role}
                     </p>
-                    <Button variant="outline" className="w-full h-12 text-base font-semibold">
-                      {support.action}
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Field Office Photo with Overlay */}
+        <section className="py-10 px-6 bg-transparent">
+          <div className="container mx-auto">
+            <motion.div 
+              className="max-w-5xl mx-auto relative rounded-2xl overflow-hidden shadow-2xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <img 
+                src={villageLife} 
+                alt="Our field office where every farmer's voice matters"
+                className="w-full h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 right-6">
+                <p className="text-white text-xl md:text-2xl font-semibold drop-shadow-lg">
+                  {t('contact.fieldOffice.caption')}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Form + FAQ */}
+        <section className="py-10 px-6 bg-transparent">
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {/* Send us a Message Form */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="p-8 bg-white/90 backdrop-blur-sm shadow-lg rounded-2xl border-0">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                    {t('contact.form.title')}
+                  </h3>
+                  <form className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="firstName" className="text-sm font-medium text-gray-700 mb-1 block">
+                          {t('contact.form.firstName')}
+                        </Label>
+                        <Input
+                          id="firstName"
+                          placeholder={t('contact.form.firstName')}
+                          className="h-11 bg-gray-50 border-gray-300 rounded-lg focus:border-[#2E5B3A] focus:ring-[#2E5B3A]"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="lastName" className="text-sm font-medium text-gray-700 mb-1 block">
+                          {t('contact.form.lastName')}
+                        </Label>
+                        <Input
+                          id="lastName"
+                          placeholder={t('contact.form.lastName')}
+                          className="h-11 bg-gray-50 border-gray-300 rounded-lg focus:border-[#2E5B3A] focus:ring-[#2E5B3A]"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <Label htmlFor="phone" className="text-sm font-medium text-gray-700 mb-1 block">
+                        {t('contact.form.phone')}
+                      </Label>
+                      <Input
+                        id="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                        className="h-11 bg-gray-50 border-gray-300 rounded-lg focus:border-[#2E5B3A] focus:ring-[#2E5B3A]"
+                      />
+                    </div>
+
+                    <div>
+                      <Label htmlFor="email" className="text-sm font-medium text-gray-700 mb-1 block">
+                        {t('contact.form.email')}
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="your.email@example.com"
+                        className="h-11 bg-gray-50 border-gray-300 rounded-lg focus:border-[#2E5B3A] focus:ring-[#2E5B3A]"
+                      />
+                    </div>
+
+                    <div>
+                      <Label htmlFor="message" className="text-sm font-medium text-gray-700 mb-1 block">
+                        {t('contact.form.message')}
+                      </Label>
+                      <Textarea
+                        id="message"
+                        placeholder={t('contact.form.message')}
+                        className="h-32 bg-gray-50 border-gray-300 rounded-lg focus:border-[#2E5B3A] focus:ring-[#2E5B3A] resize-none"
+                      />
+                    </div>
+
+                    <Button
+                      type="submit"
+                      className="w-full h-12 bg-[#2E5B3A] hover:bg-[#234528] text-white font-semibold rounded-lg transition-all shadow-md hover:shadow-lg"
+                    >
+                      {t('contact.form.sendMessage')}
                     </Button>
-                  </div>
+                  </form>
                 </Card>
-              ))}
+              </motion.div>
+
+              {/* FAQ Section */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                    {t('contact.faq.title')}
+                  </h3>
+                  {faqs && faqs.map((faq, index) => (
+                    <Card key={index} className="p-6 bg-white/90 backdrop-blur-sm shadow-md rounded-2xl border-0 hover:shadow-lg transition-all">
+                      <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                        {faq.question}
+                      </h4>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </Card>
+                  ))}
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
+      </div>
 
-        <section className="py-20 bg-transparent">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl md:text-2xl text-black">
-                अक्सर पूछे जाने वाले प्रश्न
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto space-y-6">
-              {faqs.map((faq, index) => (
-                <Card key={index} className="p-8 hover:shadow-2xl transition-all duration-300 bg-white/20 backdrop-blur-sm border border-white/30">
-                  <h4 className="text-xl font-bold text-black mb-4">
-                    {faq.question}
-                  </h4>
-                  <p className="text-black leading-relaxed text-base">
-                    {faq.answer}
-                  </p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-24 bg-transparent">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white drop-shadow-lg">
-              Need Immediate Help?
-            </h2>
-            <p className="text-xl md:text-2xl mb-10 text-white/95 max-w-3xl mx-auto drop-shadow-md">
-              For urgent pickup requests or payment issues, contact our 24/7 support team
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button variant="hero" size="lg" className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all">
-                <Phone className="w-6 h-6 mr-3" />
-                Call Emergency Support
-              </Button>
-              <Button variant="hero" size="lg" className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all">
-                <MessageSquare className="w-6 h-6 mr-3" />
-                WhatsApp Support
-              </Button>
-            </div>
-          </div>
-        </section>
+      {/* Floating WhatsApp Button with QR Modal */}
+      <div className="fixed bottom-6 right-6 z-50">
+        {/* QR Code Modal - Shows on click */}
+        {showQR && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowQR(false)}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            />
+            
+            {/* Modal Content */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
+              className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-2xl p-8 w-[90%] max-w-md z-50"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowQR(false)}
+                className="absolute top-4 right-4 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+              >
+                <X className="w-5 h-5 text-gray-600" />
+              </button>
+              
+              <div className="text-center">
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                  {t('contact.whatsappQR.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-6">
+                  {t('contact.whatsappQR.caption')}
+                </p>
+                
+                {/* QR Code Image - Full Size */}
+                <div className="w-full max-w-xs mx-auto mb-6 bg-white rounded-2xl p-4 border-4 border-[#25D366]">
+                  {/* Replace this with your actual QR code image */}
+                  {/* Make sure to save your QR code as: src/assets/whatsapp-qr.png */}
+                  <img 
+                    src="/whatsapp-qr.png" 
+                    alt="WhatsApp QR Code" 
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      // Fallback if image not found
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  {/* Fallback SVG if image not found */}
+                  <svg viewBox="0 0 29 29" className="w-full h-full hidden">
+                    <rect width="29" height="29" fill="white"/>
+                    <rect x="0" y="0" width="7" height="7" fill="black"/>
+                    <rect x="1" y="1" width="5" height="5" fill="white"/>
+                    <rect x="2" y="2" width="3" height="3" fill="black"/>
+                    <rect x="22" y="0" width="7" height="7" fill="black"/>
+                    <rect x="23" y="1" width="5" height="5" fill="white"/>
+                    <rect x="24" y="2" width="3" height="3" fill="black"/>
+                    <rect x="0" y="22" width="7" height="7" fill="black"/>
+                    <rect x="1" y="23" width="5" height="5" fill="white"/>
+                    <rect x="2" y="24" width="3" height="3" fill="black"/>
+                    <rect x="10" y="10" width="9" height="9" fill="black"/>
+                    <rect x="11" y="11" width="7" height="7" fill="white"/>
+                    <rect x="12" y="12" width="5" height="5" fill="black"/>
+                    <rect x="13" y="13" width="3" height="3" fill="white"/>
+                    <rect x="14" y="14" width="1" height="1" fill="black"/>
+                  </svg>
+                </div>
+                
+                {/* WhatsApp Link Button */}
+                <Button
+                  onClick={() => {
+                    window.open('https://wa.me/919876543210', '_blank');
+                    setShowQR(false);
+                  }}
+                  className="w-full h-14 bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                >
+                  <MessageSquare className="w-6 h-6" />
+                  <span>{t('contact.whatsappQR.openWhatsApp')}</span>
+                </Button>
+                
+                <p className="text-xs text-gray-500 mt-4">
+                  {t('contact.whatsappQR.instruction')}
+                </p>
+              </div>
+            </motion.div>
+          </>
+        )}
+        
+        {/* Floating Button - Click to open modal */}
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setShowQR(true)}
+          className="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all relative"
+          title="Scan to Chat with Us"
+        >
+          <MessageSquare className="w-8 h-8 text-white" />
+          {/* Pulse animation */}
+          <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
+        </motion.button>
       </div>
     </div>
   );

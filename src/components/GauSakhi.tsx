@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/react-i18next";
 import womenImage from "../assets/Women.jpeg";
 import cowsTransport from "../assets/cowsTransport.jpeg";
 import biogasImage from "../assets/Biogas.jpeg";
@@ -6,60 +7,61 @@ import farmerPayment from "../assets/farmer-payment.jpg";
 import farmersWorking from "../assets/farmers-working.jpg";
 
 export const GauSakhi = () => {
+  const { t } = useTranslation();
   const platforms = [
     {
       id: 1,
-      title: "GauSakhi",
-      subtitle: "For Gau-sewa workers and Gaushala staff",
-      description: "For Gau-sewa workers and Gaushala staff who handle daily gobar collection and truck tracking.",
-      details: "Just speak in Hindi, scan cow tags, and record work hands-free — even without internet.",
+      titleKey: 'users.gauSakhi.title',
+      subtitleKey: 'users.gauSakhi.subtitle',
+      descriptionKey: 'users.gauSakhi.description',
+      detailsKey: 'users.gauSakhi.details',
       image: womenImage,
       imageAlt: "Gau-sewa worker using GauSakhi app",
-      buttonText: "Join Now",
+      buttonText: t('common.learnMore'),
       imageLeft: true
     },
     {
       id: 2,
-      title: "UrjaVyapar",
-      subtitle: "For Corporate Buyers & Energy Companies",
-      description: "For CBG buyers from oil & gas companies, city gas distributors, and fleet operators.",
-      details: "Built for procurement heads, sustainability teams, and distributors who buy Compressed Biogas in bulk. UrjaVyapar simplifies CBG sourcing with verified suppliers, real-time pricing, and PESO-compliant invoicing.",
+      titleKey: 'users.urjaVyapar.title',
+      subtitleKey: 'users.urjaVyapar.subtitle',
+      descriptionKey: 'users.urjaVyapar.description',
+      detailsKey: 'users.urjaVyapar.details',
       image: cowsTransport,
       imageAlt: "Cows transport for UrjaVyapar platform",
-      buttonText: "Explore",
+      buttonText: t('common.learnMore'),
       imageLeft: false
     },
     {
       id: 3,
-      title: "UrjaSanyojak",
-      subtitle: "For Biogas Plant Owners & Entrepreneurs",
-      description: "For people running or planning biogas plants — big or small.",
-      details: "Designed for existing plant owners and clean-energy entrepreneurs who want to check their CBG potential, access subsidies, and connect with verified buyers — all from one map-based platform.",
+      titleKey: 'users.urjaSanyojak.title',
+      subtitleKey: 'users.urjaSanyojak.subtitle',
+      descriptionKey: 'users.urjaSanyojak.description',
+      detailsKey: 'users.urjaSanyojak.details',
       image: biogasImage,
       imageAlt: "Biogas facility for UrjaSanyojak platform",
-      buttonText: "Explore",
+      buttonText: t('common.learnMore'),
       imageLeft: true
     },
     {
       id: 4,
-      title: "SAUBHAGYA Command Center",
-      subtitle: "For Mission Leaders & State Officers",
-      description: "For state nodal officers, mission directors, and government teams managing CBG programs.",
-      details: "Made for national and state-level administrators who oversee the SAUBHAGYA mission. Get a unified view of every Gaushala, sensor, and CBG plant — enabling real-time governance, audits, and decision-making.",
+      titleKey: 'users.commandCenter.title',
+      subtitleKey: 'users.commandCenter.subtitle',
+      descriptionKey: 'users.commandCenter.description',
+      detailsKey: 'users.commandCenter.details',
       image: farmerPayment,
       imageAlt: "Government officials using SAUBHAGYA Command Center",
-      buttonText: "Explore",
+      buttonText: t('common.learnMore'),
       imageLeft: false
     },
     {
       id: 5,
-      title: "ShuddhiDoot",
-      subtitle: "For CBG Purification Plant Engineers",
-      description: "For purification plant managers and operators ensuring CBG purity.",
-      details: "Built for engineers, technicians, and CNG hub supervisors who monitor methane purity, pressure, and plant health. ShuddhiDoot ensures every CBG batch meets quality standards—automatically.",
+      titleKey: 'users.shuddhiDoot.title',
+      subtitleKey: 'users.shuddhiDoot.subtitle',
+      descriptionKey: 'users.shuddhiDoot.description',
+      detailsKey: 'users.shuddhiDoot.details',
       image: farmersWorking,
       imageAlt: "Engineers using ShuddhiDoot for CBG purification",
-      buttonText: "Explore",
+      buttonText: t('common.learnMore'),
       imageLeft: true
     }
   ];
@@ -105,22 +107,22 @@ export const GauSakhi = () => {
                   {/* Main heading */}
                   <div>
                     <h2 className="text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-2xl">
-                      {platform.title}
+                      {t(platform.titleKey)}
                     </h2>
                     <h3 className="text-2xl lg:text-3xl font-semibold text-green-300 mb-6 drop-shadow-lg">
-                      {platform.subtitle}
+                      {t(platform.subtitleKey)}
                     </h3>
                   </div>
 
                   {/* Description paragraph */}
                   <p className="text-lg text-white/90 leading-relaxed mb-6 drop-shadow-lg">
-                    {platform.description}
+                    {t(platform.descriptionKey)}
                   </p>
 
                   {/* Details */}
                   <div className="mb-8">
                     <p className="text-xl text-white/95 leading-relaxed drop-shadow-lg">
-                      {platform.details}
+                      {t(platform.detailsKey)}
                     </p>
                   </div>
 

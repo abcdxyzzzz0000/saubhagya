@@ -10,10 +10,22 @@
   "hero": {
     "title": "From Dung to Dhan",
     "subtitle": "गौशाला से रोज़ी — किसानों के लिए न्यायपूर्ण भुगतान",
-    "description": "IoT-verified weighments, same-day payouts, local CBG production",
+    "description": "Fair payments. Real income. Powered by your cows",
     "joinFarmer": "Join as Farmer",
     "requestPickup": "Request Pickup",
-    "requestDemo": "Request Demo"
+    "requestDemo": "Request Demo",
+    "processSteps": {
+      "step1": "Collect Dung",
+      "step2": "Digital Weighing",
+      "step3": "Instant Payout",
+      "step4": "Biogas Made",
+      "caption": "Every pickup is tracked, weighed, and paid — same day, no middlemen."
+    },
+    "stats": {
+      "incomeIncrease": "Farmer Income Increase",
+      "cbgEfficiency": "CBG Yield Efficiency",
+      "methaneReduction": "Methane Reduction"
+    }
   },
   "platformHighlights": {
     "title": "Platform Highlights",
@@ -163,8 +175,42 @@
   "benefits": {
     "title": "Farmer Benefits",
     "subtitle": "किसान लाभ",
+    "instantPayouts": {
+      "title": "Instant Payouts",
+      "subtitle": "तत्काल भुगतान",
+      "description": "Get paid the same day your contribution is processed. No waiting, no delays."
+    },
+    "zeroDisputes": {
+      "title": "Zero Disputes",
+      "subtitle": "शून्य विवाद",
+      "description": "IoT-verified weighing ensures transparent and accurate measurements every time."
+    },
+    "localJobs": {
+      "title": "Local Jobs",
+      "subtitle": "स्थानीय नौकरियां",
+      "description": "Creating employment opportunities in your village through local CBG production."
+    },
     "description": "Discover how Saubhagya transforms agricultural waste into sustainable income for farming communities across India.",
+    "newDescription": "Turn daily cow dung into daily income. Farmers across India are earning from what was once waste.",
     "keyBenefitsTitle": "Key Benefits at a Glance",
+    "newKeyBenefits": {
+      "dailyCash": {
+        "title": "Daily cash income (₹400–₹700)",
+        "desc": "directly in your account"
+      },
+      "fairWeighing": {
+        "title": "Fair, digital weighing",
+        "desc": "no disputes"
+      },
+      "noTransport": {
+        "title": "No transport hassle",
+        "desc": "we pick it up"
+      },
+      "biogasEconomy": {
+        "title": "Build your local biogas economy",
+        "desc": "sustainable and profitable"
+      }
+    },
     "mainBenefitsTitle": "Main Benefits",
     "mainBenefitsSubtitle": "मुख्य लाभ",
     "additionalAdvantagesTitle": "Additional Advantages",
@@ -188,19 +234,45 @@
         "title": "Consistent Daily Income",
         "subtitle": "दैनिक आय",
         "description": "Transform waste into reliable, year-round income stream",
-        "details": "Earn ₹3-5 per kilogram of cattle dung with flexible daily collection schedules that fit your routine. Unlike seasonal crops, this income source remains consistent throughout the year regardless of weather or harvest cycles. A farmer with 25 cattle producing 250kg of dung daily can earn ₹750-1,250 per day, translating to ₹22,500-37,500 monthly. No upfront investment required - start earning from day one. The material you previously had to dispose of now becomes a valuable commodity with guaranteed buyers."
+        "details": "Earn ₹3-5 per kilogram of cattle dung with flexible daily collection schedules that fit your routine. Unlike seasonal crops, this income source remains consistent throughout the year regardless of weather or harvest cycles. A farmer with 25 cattle producing 250kg of dung daily can earn ₹750-1,250 per day, translating to ₹22,500-37,500 monthly. No upfront investment required - start earning from day one. The material you previously had to dispose of now becomes a valuable commodity with guaranteed buyers.",
+        "quote": "Every kilo counts. Weigh, verify, and pay — the same day.",
+        "farmerName": "Ramprasad, Satna"
       },
       "incomeBoost": {
         "title": "Significant Income Boost",
         "subtitle": "बढ़ा हुआ मुनाफा",
         "description": "30-50% increase in overall household income",
-        "details": "Our transparent, market-linked pricing ensures you receive competitive rates with quality bonuses for superior materials. This additional income stream requires minimal extra labor - you're already managing cattle, now you're monetizing their waste. For typical farming families earning ₹25,000-40,000 monthly from agriculture, Saubhagya adds ₹12,000-18,000 in supplementary income - a 30-50% boost. This extra income helps families afford better education for children, improved healthcare, agricultural investments, and emergency savings without taking loans."
+        "details": "Our transparent, market-linked pricing ensures you receive competitive rates with quality bonuses for superior materials. This additional income stream requires minimal extra labor - you're already managing cattle, now you're monetizing their waste. For typical farming families earning ₹25,000-40,000 monthly from agriculture, Saubhagya adds ₹12,000-18,000 in supplementary income - a 30-50% boost. This extra income helps families afford better education for children, improved healthcare, agricultural investments, and emergency savings without taking loans.",
+        "quote": "Earn ₹500+ per cow daily — no hidden cuts.",
+        "farmerName": "Sunita Devi, Rewa"
       },
       "environmental": {
         "title": "Environmental & Community Benefits",
         "subtitle": "पर्यावरणीय प्रभाव",
         "description": "Reduce emissions by 40% while improving community health",
-        "details": "By properly processing cattle dung through anaerobic digestion, you prevent uncontrolled methane release - a greenhouse gas 25 times more potent than CO₂. Each ton of dung you supply prevents approximately 25kg of methane emissions, equivalent to taking 1.5 cars off roads for a year. This also eliminates groundwater contamination, reduces fly and mosquito breeding, and improves village sanitation. The CBG produced replaces fossil fuels, supporting India's renewable energy targets. The digestate byproduct returned to you is nutrient-rich organic fertilizer, reducing chemical fertilizer costs by 20-30% while improving soil health for better crop yields."
+        "details": "By properly processing cattle dung through anaerobic digestion, you prevent uncontrolled methane release - a greenhouse gas 25 times more potent than CO₂. Each ton of dung you supply prevents approximately 25kg of methane emissions, equivalent to taking 1.5 cars off roads for a year. This also eliminates groundwater contamination, reduces fly and mosquito breeding, and improves village sanitation. The CBG produced replaces fossil fuels, supporting India's renewable energy targets. The digestate byproduct returned to you is nutrient-rich organic fertilizer, reducing chemical fertilizer costs by 20-30% while improving soil health for better crop yields.",
+        "quote": "Cleaner gaushalas, greener villages, and reduced methane.",
+        "farmerName": "Rajesh Kumar, Jabalpur"
+      }
+    },
+    "byTheNumbers": {
+      "title": "Saubhagya by the Numbers",
+      "subtitle": "सौभाग्य आँकड़ों में",
+      "stat1": {
+        "number": "25,000+",
+        "label": "kg dung collected weekly"
+      },
+      "stat2": {
+        "number": "₹3 Cr+",
+        "label": "paid to farmers"
+      },
+      "stat3": {
+        "number": "40+",
+        "label": "CBG units running locally"
+      },
+      "stat4": {
+        "number": "1000+",
+        "label": "active farmers"
       }
     },
     "additionalBenefits": {
@@ -234,16 +306,129 @@
     "title": "Users",
     "subtitle": "उपयोगकर्ता",
     "description": "Our comprehensive digital ecosystem provides specialized tools for every stakeholder in the biogas value chain. Each platform is designed to streamline operations — with real-time monitoring, offline capabilities, and user-specific features designed to maximize efficiency and transparency.",
+    "newDescription": "Saubhagya brings together farmers, gaushalas, transporters, and CBG producers — one clean energy network.",
     "keyFeatures": "Key Features",
     "learnMore": "Learn More",
     "readyToJoin": "Ready to Join Our Platform?",
     "readyToJoinDesc": "Whether you're a field worker, operator, or administrator, we have the right tools for you.",
-    "getStartedToday": "Get Started Today"
+    "getStartedToday": "Get Started Today",
+    "userTypes": {
+      "farmers": {
+        "type": "Farmers",
+        "tagline": "Earn more from every cow.",
+        "cta": "Join Now"
+      },
+      "gaushalas": {
+        "type": "Gaushalas",
+        "tagline": "Cleaner sheds, steady revenue.",
+        "cta": "Partner With Us"
+      },
+      "transporters": {
+        "type": "Transporters",
+        "tagline": "Get paid per pickup.",
+        "cta": "Register Truck"
+      },
+      "cbgPlants": {
+        "type": "CBG Plants",
+        "tagline": "Verified feedstock, stable supply.",
+        "cta": "Talk to Us"
+      }
+    },
+    "whoTrustsUs": {
+      "title": "Who Trusts Us",
+      "subtitle": "Our partners in rural progress",
+      "partners": {
+        "panchayats": "Panchayats",
+        "cooperatives": "Cooperatives",
+        "cbgPartners": "CBG Partners",
+        "farmerGroups": "Farmer Groups"
+      }
+    },
+    "gauSakhi": {
+      "title": "GauSakhi",
+      "subtitle": "For Gau-sewa workers and Gaushala staff",
+      "description": "For Gau-sewa workers and Gaushala staff who handle daily gobar collection and truck tracking.",
+      "details": "Just speak in Hindi, scan cow tags, and record work hands-free — even without internet."
+    },
+    "urjaVyapar": {
+      "title": "UrjaVyapar",
+      "subtitle": "For Corporate Buyers & Energy Companies",
+      "description": "For CBG buyers from oil & gas companies, city gas distributors, and fleet operators.",
+      "details": "Built for procurement heads, sustainability teams, and distributors who buy Compressed Biogas in bulk. UrjaVyapar simplifies CBG sourcing with verified suppliers, real-time pricing, and PESO-compliant invoicing."
+    },
+    "urjaSanyojak": {
+      "title": "UrjaSanyojak",
+      "subtitle": "For Biogas Plant Owners & Entrepreneurs",
+      "description": "For people running or planning biogas plants — big or small.",
+      "details": "Designed for existing plant owners and clean-energy entrepreneurs who want to check their CBG potential, access subsidies, and connect with verified buyers — all from one map-based platform."
+    },
+    "commandCenter": {
+      "title": "SAUBHAGYA Command Center",
+      "subtitle": "For Mission Leaders & State Officers",
+      "description": "For state nodal officers, mission directors, and government teams managing CBG programs.",
+      "details": "Made for national and state-level administrators who oversee the SAUBHAGYA mission. Get a unified view of every Gaushala, sensor, and CBG plant — enabling real-time governance, audits, and decision-making."
+    },
+    "shuddhiDoot": {
+      "title": "ShuddhiDoot",
+      "subtitle": "For CBG Purification Plant Engineers",
+      "description": "For purification plant managers and operators ensuring CBG purity.",
+      "details": "Built for engineers, technicians, and CNG hub supervisors who monitor methane purity, pressure, and plant health. ShuddhiDoot ensures every CBG batch meets quality standards—automatically."
+    }
   },
   "contact": {
     "title": "Contact Us",
     "subtitle": "संपर्क करें",
     "description": "Ready to start earning from your cattle dung and transform waste into wealth? Have questions about our process, pricing, or technology? Our dedicated multilingual support team is available to assist you every step of the way - from initial registration to your first payment and beyond.",
+    "hero": {
+      "title": "We're here for farmers, every day of the week.",
+      "subtitle": "Your trusted partner in rural prosperity"
+    },
+    "simple": {
+      "call": {
+        "title": "Call Us",
+        "details": "1800 123 456"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "details": "+91 98765 43210"
+      },
+      "email": {
+        "title": "Email",
+        "details": "support@saubhagya.in"
+      },
+      "visit": {
+        "title": "Visit Us",
+        "details": "Nashik, Maharashtra"
+      }
+    },
+    "fieldTeam": {
+      "title": "Meet Our Field Team",
+      "subtitle": "The people who make it happen",
+      "member1": {
+        "name": "Manoj",
+        "role": "Field Support, Nashik"
+      },
+      "member2": {
+        "name": "Rekha",
+        "role": "Farmer Helpdesk"
+      },
+      "member3": {
+        "name": "Suresh",
+        "role": "On-field Coordinator"
+      }
+    },
+    "fieldOffice": {
+      "caption": "Our field office, where every farmer's voice matters."
+    },
+    "whatsappQR": {
+      "title": "Chat with Us on WhatsApp",
+      "caption": "Scan this QR code with your phone camera",
+      "openWhatsApp": "Open WhatsApp",
+      "instruction": "Or click the button above to chat directly"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    },
     "quickContactGuide": "Quick Contact Guide",
     "getInTouch": "Get In Touch",
     "getInTouchSubtitle": "संपर्क में रहें",
@@ -303,6 +488,7 @@
       }
     },
     "form": {
+      "title": "Send us a Message",
       "firstName": "First Name",
       "lastName": "Last Name",
       "phone": "Phone Number",
@@ -335,10 +521,68 @@
       }
     ]
   },
+  "aboutSaubhagya": {
+    "languageNote": "Use the language toggle in the header to switch between English and Hindi"
+  },
   "about": {
     "title": "About Saubhagya",
     "subtitle": "सौभाग्य के बारे में",
     "description": "Transforming rural India through innovative agricultural waste management, creating sustainable income opportunities while contributing to clean energy solutions.",
+    "hero": {
+      "title": "About Saubhagya",
+      "tagline": "Saubhagya is making cow dung valuable again — for farmers, for gaushalas, and for the planet.",
+      "subtext": "A unified rural clean-energy network that turns waste into wealth for every village."
+    },
+    "missionVision": {
+      "mission": {
+        "title": "Mission",
+        "content": "To turn rural waste into rural wealth — with fairness, transparency, and local ownership."
+      },
+      "vision": {
+        "title": "Vision",
+        "content": "A future where every village earns from its cows, every farmer is paid fairly, and every home runs on clean energy."
+      }
+    },
+    "coreValues": {
+      "title": "Our Core Values",
+      "subtitle": "हमारे मूल मूल्य",
+      "communityFirst": {
+        "title": "Community First",
+        "subtitle": "समुदाय प्रथम",
+        "description": "Putting farmers and rural communities at the center of everything we do, ensuring their prosperity and wellbeing."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "subtitle": "पारदर्शिता",
+        "description": "Complete transparency in weighing, pricing, and payment processes with real-time tracking and verification."
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "subtitle": "गुणवत्ता आश्वासन",
+        "description": "Maintaining highest standards in collection and processing with certified quality control measures."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "subtitle": "स्थिरता",
+        "description": "Creating a sustainable future through clean energy solutions that benefit both farmers and environment."
+      }
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "subtitle": "हमारी यात्रा",
+      "milestone1": "Pilot in Nashik",
+      "milestone2": "50 Farmers Joined",
+      "milestone3": "CBG Production Begins",
+      "milestone4": "Expanding Nationwide"
+    },
+    "videoReel": {
+      "overlayText": "Rural progress in motion"
+    },
+    "cta": {
+      "title": "Join Our Mission",
+      "description": "Be part of India's clean energy revolution while improving farmer livelihoods",
+      "button": "Get Started Today"
+    },
     "aboutGlance": "About Saubhagya - At a Glance",
     "mission": "Our Mission",
     "missionSubtitle": "हमारा मिशन",
@@ -348,8 +592,6 @@
     "visionSubtitle": "हमारी दृष्टि",
     "visionDescription": "To become India's leading agricultural waste-to-energy platform, serving over 10,000 farmers across rural India and contributing significantly to the nation's renewable energy capacity.",
     "visionDescription2": "Through technology, transparency, and trust, we aim to revolutionize how rural communities participate in and benefit from the clean energy transition.",
-    "coreValues": "Our Core Values",
-    "coreValuesSubtitle": "हमारे मूल मूल्य",
     "impact": "Our Impact",
     "impactSubtitle": "हमारा प्रभाव",
     "joinMission": "Join Our Mission",
@@ -408,6 +650,30 @@
         "label": "Emission Reduction",
         "subtitle": "उत्सर्जन कमी"
       }
+    }
+  },
+  "aboutSection": {
+    "title": "Transforming Rural Economy",
+    "description1": "Saubhagya is revolutionizing the way rural communities generate income from agricultural waste. Our innovative platform connects farmers directly with biogas production facilities, ensuring fair compensation and transparent processes.",
+    "description2": "Through IoT-enabled collection, GPS-tracked transportation, and same-day payments, we're creating a sustainable ecosystem that benefits farmers, the environment, and local communities.",
+    "joinMission": "Join Our Mission"
+  },
+  "successStory": {
+    "title": "Successful Pilot in Agar Malwa",
+    "subtitle": "आगर मालवा में सफल पायलट",
+    "stats": {
+      "farmers": "Farmers",
+      "villages": "Villages",
+      "cbg": "Tons CBG",
+      "income": "Farmer Income"
+    },
+    "content": {
+      "title": "Transforming Rural Economy",
+      "description": "Our pilot program in Agar Malwa has successfully demonstrated the potential of converting cattle dung into valuable biogas while providing fair compensation to farmers. The initiative has created a sustainable ecosystem benefiting both the environment and local communities.",
+      "point1": "100% on-time payments to farmers",
+      "point2": "Zero waste in the collection process",
+      "point3": "30% increase in average farmer income",
+      "button": "Join Our Network"
     }
   },
   "footer": {
@@ -494,6 +760,16 @@
     "continue": "Continue",
     "step": "Step",
     "highlights": "HIGHLIGHTS",
-    "whyItMatters": "WHY IT MATTERS"
+    "whyItMatters": "WHY IT MATTERS",
+    "officeHours": {
+      "monday": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "emergency": "Emergency Support Only"
+    },
+    "needImmediateHelp": "Need Immediate Help?",
+    "urgentSupportDesc": "For urgent pickup requests or payment issues, contact our 24/7 support team",
+    "callEmergencySupport": "Call Emergency Support",
+    "whatsappSupport": "WhatsApp Support"
   }
 }

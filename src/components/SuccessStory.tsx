@@ -1,18 +1,20 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Users, Zap, TrendingUp } from "lucide-react";
+import { useTranslation } from "@/hooks/react-i18next";
 import farmerPayment from "@/assets/farmer-payment.jpg";
 
 export const SuccessStory = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-20 bg-gradient-earth">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-background mb-4">
-            Successful Pilot in Agar Malwa
+            {t('successStory.title')}
           </h2>
           <p className="text-xl text-background/90">
-            आगर मालवा में सफल पायलट
+            {t('successStory.subtitle')}
           </p>
         </div>
 
@@ -35,7 +37,7 @@ export const SuccessStory = () => {
                 <Users className="w-8 h-8 text-primary" />
                 <div>
                   <div className="text-2xl font-bold text-foreground">50+</div>
-                  <div className="text-sm text-muted-foreground">Farmers</div>
+                  <div className="text-sm text-muted-foreground">{t('successStory.stats.farmers')}</div>
                 </div>
               </div>
             </Card>
@@ -45,7 +47,7 @@ export const SuccessStory = () => {
                 <MapPin className="w-8 h-8 text-secondary" />
                 <div>
                   <div className="text-2xl font-bold text-foreground">5</div>
-                  <div className="text-sm text-muted-foreground">Villages</div>
+                  <div className="text-sm text-muted-foreground">{t('successStory.stats.villages')}</div>
                 </div>
               </div>
             </Card>
@@ -55,7 +57,7 @@ export const SuccessStory = () => {
                 <Zap className="w-8 h-8 text-primary" />
                 <div>
                   <div className="text-2xl font-bold text-foreground">2000+</div>
-                  <div className="text-sm text-muted-foreground">Tons CBG</div>
+                  <div className="text-sm text-muted-foreground">{t('successStory.stats.cbg')}</div>
                 </div>
               </div>
             </Card>
@@ -65,7 +67,7 @@ export const SuccessStory = () => {
                 <TrendingUp className="w-8 h-8 text-secondary" />
                 <div>
                   <div className="text-2xl font-bold text-foreground">₹15L+</div>
-                  <div className="text-sm text-muted-foreground">Farmer Income</div>
+                  <div className="text-sm text-muted-foreground">{t('successStory.stats.income')}</div>
                 </div>
               </div>
             </Card>
@@ -75,27 +77,27 @@ export const SuccessStory = () => {
           {/* Content */}
           <div className="text-background order-1 lg:order-2">
             <h3 className="text-2xl font-bold mb-6">
-              Transforming Rural Economy
+              {t('successStory.content.title')}
             </h3>
             <p className="text-lg text-background/90 mb-6 leading-relaxed">
-              Our pilot program in Agar Malwa has successfully demonstrated the potential of converting cattle dung into valuable biogas while providing fair compensation to farmers. The initiative has created a sustainable ecosystem benefiting both the environment and local communities.
+              {t('successStory.content.description')}
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-background rounded-full"></div>
-                <span>100% on-time payments to farmers</span>
+                <span>{t('successStory.content.point1')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-background rounded-full"></div>
-                <span>Zero waste in the collection process</span>
+                <span>{t('successStory.content.point2')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-background rounded-full"></div>
-                <span>30% increase in average farmer income</span>
+                <span>{t('successStory.content.point3')}</span>
               </div>
             </div>
             <Button variant="hero" size="lg">
-              Join Our Network
+              {t('successStory.content.button')}
             </Button>
           </div>
         </div>

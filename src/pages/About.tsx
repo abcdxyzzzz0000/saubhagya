@@ -1,212 +1,320 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Users, Eye, ShieldCheck, Sprout } from "lucide-react";
+import { motion } from "framer-motion";
 import villageLife from "@/assets/village-life.jpg";
 import farmersWorking from "@/assets/farmers-working.jpg";
+import farmerPayment from "@/assets/farmer-payment.jpg";
+import biogasFacility from "@/assets/biogas-facility.jpg";
 import { useTranslation } from "../hooks/react-i18next";
 
 export const About = () => {
   const { t } = useTranslation();
   
-  const values = [
+  // Timeline milestones
+  const timeline = [
     {
-      icon: Users,
-      valueKey: "community"
+      year: "2022",
+      description: t('about.timeline.milestone1'),
+      icon: "🌱"
     },
     {
-      icon: Eye,
-      valueKey: "transparency"
+      year: "2023",
+      description: t('about.timeline.milestone2'),
+      icon: "👨‍🌾"
     },
     {
-      icon: ShieldCheck,
-      valueKey: "quality"
+      year: "2024",
+      description: t('about.timeline.milestone3'),
+      icon: "⚡"
     },
     {
-      icon: Sprout,
-      valueKey: "sustainability"
+      year: "2025",
+      description: t('about.timeline.milestone4'),
+      icon: "🚀"
     }
   ];
 
-  const stats = [
-    { statKey: "farmers" },
-    { statKey: "villages" },
-    { statKey: "payouts" },
-    { statKey: "emissions" }
+  // Core values with images
+  const coreValues = [
+    {
+      title: t('about.coreValues.communityFirst.title'),
+      subtitle: t('about.coreValues.communityFirst.subtitle'),
+      description: t('about.coreValues.communityFirst.description'),
+      image: villageLife,
+      alt: "Village meeting scene showing community first approach"
+    },
+    {
+      title: t('about.coreValues.transparency.title'),
+      subtitle: t('about.coreValues.transparency.subtitle'),
+      description: t('about.coreValues.transparency.description'),
+      image: farmerPayment,
+      alt: "Digital weighing scale with display showing transparency"
+    },
+    {
+      title: t('about.coreValues.quality.title'),
+      subtitle: t('about.coreValues.quality.subtitle'),
+      description: t('about.coreValues.quality.description'),
+      image: biogasFacility,
+      alt: "CBG flame and gas purity lab check for quality assurance"
+    },
+    {
+      title: t('about.coreValues.sustainability.title'),
+      subtitle: t('about.coreValues.sustainability.subtitle'),
+      description: t('about.coreValues.sustainability.description'),
+      image: farmersWorking,
+      alt: "Farmer planting saplings for sustainability"
+    }
   ];
 
   return (
     <div className="min-h-screen relative">
       <div className="relative z-10">
+        {/* Hero Section */}
         <section className="pt-20 pb-20 bg-transparent">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-black">
-              {t('about.title')}
-            </h1>
-            <p className="text-2xl md:text-3xl mb-8 font-medium text-black">
-              {t('about.subtitle')}
-            </p>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto text-black leading-relaxed">
-              {t('about.description')}
-            </p>
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold mb-8 text-white drop-shadow-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              {t('about.hero.title')}
+            </motion.h1>
+            <motion.p 
+              className="text-2xl md:text-3xl mb-6 font-medium text-white/95 max-w-5xl mx-auto leading-relaxed drop-shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              {t('about.hero.tagline')}
+            </motion.p>
+            <motion.p 
+              className="text-xl md:text-2xl max-w-4xl mx-auto text-white/90 leading-relaxed drop-shadow-md"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              {t('about.hero.subtext')}
+            </motion.p>
           </div>
         </section>
 
-        <section className="py-16 bg-transparent">
+        {/* Mission & Vision - Side by Side */}
+        <section className="py-20 bg-white/10 backdrop-blur-sm">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-8 border-l-4 border-primary">
-                <h3 className="text-2xl font-bold text-black mb-6">{t('about.aboutGlance')}</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-black"><strong className="text-black">{t('about.glancePoints.mission')}</strong> {t('about.glancePoints.missionDesc')}</p>
+            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {/* Mission Card */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="p-8 h-full bg-white/20 backdrop-blur-sm border-l-4 border-[#0A802B] shadow-xl hover:shadow-2xl transition-all">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 bg-[#0A802B] rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">🎯</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-800">
+                      {t('about.missionVision.mission.title')}
+                    </h2>
                   </div>
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-black"><strong className="text-black">{t('about.glancePoints.impact')}</strong> {t('about.glancePoints.impactDesc')}</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-black"><strong className="text-black">{t('about.glancePoints.technology')}</strong> {t('about.glancePoints.technologyDesc')}</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-black"><strong className="text-black">{t('about.glancePoints.promise')}</strong> {t('about.glancePoints.promiseDesc')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-24 bg-transparent">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-24">
-              <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={villageLife} 
-                    alt="Rural community life"
-                    className="w-full h-96 object-cover"
-                  />
-                </div>
-              </div>
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">
-                  {t('about.mission')}
-                </h2>
-                <p className="text-xl text-white mb-4 font-medium drop-shadow-md">
-                  {t('about.missionSubtitle')}
-                </p>
-                <p className="text-lg text-white leading-relaxed mb-6 drop-shadow-md">
-                  {t('about.missionDescription')}
-                </p>
-                <p className="text-lg text-white leading-relaxed drop-shadow-md">
-                  {t('about.missionDescription2')}
-                </p>
-              </div>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto lg:flex-row-reverse">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">
-                  {t('about.vision')}
-                </h2>
-                <p className="text-xl text-white mb-4 font-medium drop-shadow-md">
-                  {t('about.visionSubtitle')}
-                </p>
-                <p className="text-lg text-white leading-relaxed mb-6 drop-shadow-md">
-                  {t('about.visionDescription')}
-                </p>
-                <p className="text-lg text-white leading-relaxed drop-shadow-md">
-                  {t('about.visionDescription2')}
-                </p>
-              </div>
-              <div className="relative order-first lg:order-last">
-                <div className="rounded-3xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={farmersWorking} 
-                    alt="Farmers at work"
-                    className="w-full h-96 object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-24 bg-transparent">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                {t('about.coreValues')}
-              </h2>
-              <p className="text-xl text-black font-semibold">{t('about.coreValuesSubtitle')}</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {values.map((value, index) => (
-                <Card key={index} className="p-8 text-center shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 border-2 border-white/30 bg-white/20 backdrop-blur-sm">
-                  <div className={`w-20 h-20 ${
-                    index === 0 ? 'bg-gradient-to-br from-blue-500 to-blue-600' : 
-                    index === 1 ? 'bg-gradient-to-br from-green-500 to-green-600' : 
-                    index === 2 ? 'bg-gradient-to-br from-purple-500 to-purple-600' : 'bg-gradient-to-br from-orange-500 to-orange-600'
-                  } rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-                    <value.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h4 className="text-2xl font-bold text-black mb-3">
-                    {t(`about.values.${value.valueKey}.title`)}
-                  </h4>
-                  <p className="text-base text-black mb-4 font-semibold">
-                    {t(`about.values.${value.valueKey}.subtitle`)}
-                  </p>
-                  <p className="text-base text-black leading-relaxed">
-                    {t(`about.values.${value.valueKey}.description`)}
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    {t('about.missionVision.mission.content')}
                   </p>
                 </Card>
+              </motion.div>
+
+              {/* Vision Card */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="p-8 h-full bg-white/20 backdrop-blur-sm border-l-4 border-[#0A802B] shadow-xl hover:shadow-2xl transition-all">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 bg-[#0A802B] rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">🔮</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-800">
+                      {t('about.missionVision.vision.title')}
+                    </h2>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    {t('about.missionVision.vision.content')}
+                  </p>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Values - Photo Based */}
+        <section className="py-24 bg-transparent">
+          <div className="container mx-auto px-6">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+                {t('about.coreValues.title')}
+              </h2>
+              <p className="text-xl text-white/90 drop-shadow-md">{t('about.coreValues.subtitle')}</p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+              {coreValues.map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 bg-white/90 backdrop-blur-sm group">
+                    {/* Photo */}
+                    <div className="relative h-56 overflow-hidden">
+                      <img 
+                        src={value.image}
+                        alt={value.alt}
+                        className="w-full h-full object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <h4 className="text-xl font-bold text-white mb-1">
+                          {value.title}
+                        </h4>
+                        <p className="text-sm text-white/90 font-medium">
+                          {value.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Description */}
+                    <div className="p-6">
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {value.description}
+                      </p>
+                    </div>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-24 bg-transparent">
+        {/* Timeline Section */}
+        <section className="py-24 bg-white/10 backdrop-blur-sm">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 drop-shadow-lg">
-                {t('about.impact')}
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+                {t('about.timeline.title')}
               </h2>
-              <p className="text-xl text-black drop-shadow-md">{t('about.impactSubtitle')}</p>
-            </div>
+              <p className="text-xl text-gray-600">{t('about.timeline.subtitle')}</p>
+            </motion.div>
 
-            <div className="grid md:grid-cols-4 gap-10 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
-                <Card key={index} className="p-8 text-center shadow-2xl bg-white/20 backdrop-blur-sm border border-white/30">
-                  <div className="text-5xl font-bold text-primary mb-3">
-                    {t(`about.stats.${stat.statKey}.number`)}
-                  </div>
-                  <div className="text-base font-semibold text-black mb-2">
-                    {t(`about.stats.${stat.statKey}.label`)}
-                  </div>
-                  <div className="text-sm text-black font-medium">
-                    {t(`about.stats.${stat.statKey}.subtitle`)}
-                  </div>
-                </Card>
-              ))}
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-4 gap-8">
+                {timeline.map((milestone, index) => (
+                  <motion.div
+                    key={index}
+                    className="relative"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.15 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="p-6 text-center bg-white shadow-lg hover:shadow-xl transition-all">
+                      {/* Icon */}
+                      <div className="text-5xl mb-4">{milestone.icon}</div>
+                      
+                      {/* Year */}
+                      <div className="text-3xl font-bold text-[#0A802B] mb-3">
+                        {milestone.year}
+                      </div>
+                      
+                      {/* Description */}
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {milestone.description}
+                      </p>
+                    </Card>
+                    
+                    {/* Connector Line (hidden on last item) */}
+                    {index < timeline.length - 1 && (
+                      <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#0A802B]/30"></div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
+        {/* Mini Video Highlight Reel */}
+        <section className="py-20 bg-transparent">
+          <div className="container mx-auto px-6">
+            <motion.div
+              className="max-w-5xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black">
+                {/* Video Placeholder - Replace with actual video */}
+                <div className="relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900">
+                  {/* Placeholder for video */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="text-6xl mb-4">🎬</div>
+                      <p className="text-xl font-semibold mb-2">Video Coming Soon</p>
+                      <p className="text-sm text-gray-400">
+                        Cows being milked • Digital weighing • SMS payments • CBG production
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Overlay Text */}
+                  <div className="absolute bottom-6 left-6">
+                    <p className="text-white text-2xl font-bold drop-shadow-lg">
+                      {t('about.videoReel.overlayText')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-24 bg-transparent">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white drop-shadow-lg">
-              {t('about.joinMission')}
-            </h2>
-            <p className="text-xl md:text-2xl mb-10 text-white max-w-3xl mx-auto drop-shadow-md">
-              {t('about.joinMissionDesc')}
-            </p>
-            <Button variant="hero" size="lg" className="text-xl px-12 py-8 shadow-2xl hover:shadow-3xl">
-              {t('about.getStartedToday')}
-            </Button>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white drop-shadow-lg">
+                {t('about.cta.title')}
+              </h2>
+              <p className="text-xl md:text-2xl mb-10 text-white/95 max-w-3xl mx-auto drop-shadow-md">
+                {t('about.cta.description')}
+              </p>
+              <Button className="rounded-full px-12 py-6 text-xl font-semibold bg-[#0A802B] hover:bg-[#086B24] text-white shadow-2xl hover:shadow-3xl transition-all active:scale-95">
+                {t('about.cta.button')}
+              </Button>
+            </motion.div>
           </div>
         </section>
       </div>

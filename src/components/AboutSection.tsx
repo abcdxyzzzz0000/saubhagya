@@ -1,33 +1,35 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Target, Award, Globe } from "lucide-react";
+import { useTranslation } from "@/hooks/react-i18next";
 import villageLife from "@/assets/village-life.jpg";
 
 export const AboutSection = () => {
+  const { t } = useTranslation();
   const values = [
     {
       icon: Heart,
-      title: "Community First",
-      subtitle: "समुदाय प्रथम",
-      description: "Putting farmers and rural communities at the center of everything we do."
+      titleKey: 'about.values.community.title',
+      subtitleKey: 'about.values.community.subtitle',
+      descriptionKey: 'about.values.community.description'
     },
     {
       icon: Target,
-      title: "Transparency",
-      subtitle: "पारदर्शिता",
-      description: "Complete transparency in weighing, pricing, and payment processes."
+      titleKey: 'about.values.transparency.title',
+      subtitleKey: 'about.values.transparency.subtitle',
+      descriptionKey: 'about.values.transparency.description'
     },
     {
       icon: Award,
-      title: "Quality Assurance",
-      subtitle: "गुणवत्ता आश्वासन",
-      description: "Maintaining highest standards in collection and processing."
+      titleKey: 'about.values.quality.title',
+      subtitleKey: 'about.values.quality.subtitle',
+      descriptionKey: 'about.values.quality.description'
     },
     {
       icon: Globe,
-      title: "Sustainability",
-      subtitle: "स्थिरता",
-      description: "Creating a sustainable future through clean energy solutions."
+      titleKey: 'about.values.sustainability.title',
+      subtitleKey: 'about.values.sustainability.subtitle',
+      descriptionKey: 'about.values.sustainability.description'
     }
   ];
 
@@ -36,10 +38,10 @@ export const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About Saubhagya
+            {t('about.title')}
           </h2>
           <p className="text-xl text-muted-foreground">
-            सौभाग्य के बारे में
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -59,22 +61,19 @@ export const AboutSection = () => {
           {/* Content */}
           <div>
             <h3 className="text-3xl font-bold text-foreground mb-6">
-              Transforming Rural Economy
+              {t('aboutSection.title')}
             </h3>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Saubhagya is revolutionizing the way rural communities generate income from agricultural waste.
-              Our innovative platform connects farmers directly with biogas production facilities, ensuring
-              fair compensation and transparent processes.
+              {t('aboutSection.description1')}
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Through IoT-enabled collection, GPS-tracked transportation, and same-day payments, we're
-              creating a sustainable ecosystem that benefits farmers, the environment, and local communities.
+              {t('aboutSection.description2')}
             </p>
             <Button variant="outline" size="lg" className="mr-4">
-              Learn More
+              {t('common.learnMore')}
             </Button>
             <Button variant="default" size="lg">
-              Join Our Mission
+              {t('aboutSection.joinMission')}
             </Button>
           </div>
         </div>
@@ -90,13 +89,13 @@ export const AboutSection = () => {
                 <value.icon className="w-6 h-6 text-background" />
               </div>
               <h4 className="text-lg font-bold text-foreground mb-2">
-                {value.title}
+                {t(value.titleKey)}
               </h4>
               <p className="text-sm text-muted-foreground mb-3 font-medium">
-                {value.subtitle}
+                {t(value.subtitleKey)}
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                {value.description}
+                {t(value.descriptionKey)}
               </p>
             </Card>
           ))}

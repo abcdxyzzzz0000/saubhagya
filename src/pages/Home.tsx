@@ -12,28 +12,81 @@ export const Home = () => {
 
   return (
     <div className="min-h-screen relative">
-        <section className="min-h-screen flex items-center overflow-hidden pt-20 relative">
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center overflow-hidden pt-20 relative bg-cover bg-center bg-fixed">
           <div className="container mx-auto px-6 py-20 relative z-10">
             <div className="max-w-5xl mx-auto">
               <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
+                {/* Main Headline */}
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight drop-shadow-2xl">
                   {t('hero.title')}
                 </h1>
-                <p className="text-2xl md:text-3xl text-white mb-6 font-medium drop-shadow-lg">
-                  {t('hero.subtitle')}
-                </p>
-                <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto drop-shadow-lg">
-                  {t('hero.description')}
-                </p>
+                
+                {/* Bilingual Subheadline */}
+                <div className="mt-2 mb-6">
+                  <p className="text-lg md:text-xl text-white font-bold drop-shadow-lg mb-2">
+                    गौशाला से रोज़ी — किसानों के लिए सच्चा और समय पर भुगतान
+                  </p>
+                  <p className="text-lg md:text-xl text-white/95 drop-shadow-lg">
+                    Fair payments. Real income. Powered by your cows.
+                  </p>
+                </div>
 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <Button variant="hero" size="lg" className="text-xl px-10 py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 ease-in-out bg-green-600 hover:bg-green-700 text-white border-0">
-                    {t('hero.joinFarmer')}
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
+                  <Button className="rounded-full px-6 py-3 text-lg font-semibold bg-green-600 hover:bg-green-700 text-white transition-all hover:shadow-lg active:scale-95">
+                    Join as Farmer
                   </Button>
-                  <Button variant="hero" size="lg" className="text-xl px-10 py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 ease-in-out bg-yellow-500 hover:bg-yellow-600 text-white border-0">
-                    {t('hero.requestPickup')}
+                  <Button className="rounded-full px-6 py-3 text-lg font-semibold bg-yellow-500 hover:bg-yellow-600 text-white transition-all hover:shadow-lg active:scale-95">
+                    Request Pickup
                   </Button>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4-Step Micro Explainer Section */}
+        <section className="py-12 bg-white/10 backdrop-blur-sm">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-center">
+                {/* Step 1: Collect Dung */}
+                <div className="flex-1">
+                  <div className="text-5xl mb-3">🐄</div>
+                  <p className="text-white font-semibold text-sm md:text-base">{t('hero.processSteps.step1')}</p>
+                </div>
+                
+                <div className="hidden md:block text-white text-2xl">→</div>
+                
+                {/* Step 2: Digital Weighing */}
+                <div className="flex-1">
+                  <div className="text-5xl mb-3">⚖️</div>
+                  <p className="text-white font-semibold text-sm md:text-base">{t('hero.processSteps.step2')}</p>
+                </div>
+                
+                <div className="hidden md:block text-white text-2xl">→</div>
+                
+                {/* Step 3: Instant Payout */}
+                <div className="flex-1">
+                  <div className="text-5xl mb-3">💰</div>
+                  <p className="text-white font-semibold text-sm md:text-base">{t('hero.processSteps.step3')}</p>
+                </div>
+                
+                <div className="hidden md:block text-white text-2xl">→</div>
+                
+                {/* Step 4: Biogas Made */}
+                <div className="flex-1">
+                  <div className="text-5xl mb-3">🔋</div>
+                  <p className="text-white font-semibold text-sm md:text-base">{t('hero.processSteps.step4')}</p>
+                </div>
+              </div>
+              
+              {/* Caption */}
+              <div className="text-center mt-6">
+                <p className="text-white/90 text-sm md:text-base">
+                  {t('hero.processSteps.caption')}
+                </p>
               </div>
             </div>
           </div>
